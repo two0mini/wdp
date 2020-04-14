@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML</title>
+    <style>
+        div {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 200px;
+            height: 200px;
+            background: #718c00;
+        }
+        .m1{
+            background: #fff;
+        }
+    </style>
+    <script>
+        function createEle() {
+            var content = document.getElementById('content');
+            content.innerHTML = '<p class="m1">자바스크립트</p>';
+        }
+        addEventListener('load', createEle);
+    </script>
+</head>
+<body>    
+    <div id="content"></div>
+</body>
+</html>

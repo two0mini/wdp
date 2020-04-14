@@ -1,0 +1,296 @@
+@charset "UTF-8";
+@import 'variables';
+@import url('./reset.css');
+
+// mixin
+@mixin posX {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// 건너뛰기
+#skipnavigation {
+  a {
+    position:absolute; left:-3000%;
+    &:focus { 
+      display:block; left:0; top:0; z-index:10000000000; 
+      width:100%; height:30px; line-height:30px; 
+      background: blue; 
+      color:#fff; text-align:center;
+    }
+  }
+}
+
+// pc버전
+header {
+  position: fixed; top: 0;left: 0;
+  width: 15%;height: 100vh;
+  background: #fff;
+  transition: all .5s; 
+  h1 { 
+  margin: 90px auto; 
+   z-index: 1100;
+    a {        
+        display: block;
+        width: 220px;
+        height: 150px;
+        margin: 0 auto;         
+        background: url(../../images/logo1.png) 0 0 no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+    }
+ }
+
+ #gnb {  
+  margin-top: 100px;
+  margin: 0 auto;
+  display: block;    
+  width: 70%;
+   li {  
+     margin: 20px;       
+    a {
+      font-size: 24px;
+    }
+  }
+ }
+ .sec_sns { 
+   display: block;
+   text-align: center;
+   padding-top: 300px;
+  }
+}
+
+.nav-mini {
+  position: relative;
+  margin-top: 50px;  
+  width: 85%;height: 50px;
+  background: #222;
+  margin-left: 15%;
+  transition: all .5s;
+  text-align: center;
+  .col-left {
+    float: left;  
+    a {
+      padding-right: 20px;
+      color: #eee;
+    }  
+  }
+  .col-right {
+    float: right;    
+    a {
+      padding-left: 20px;
+      color: #eee;
+      position: relative;
+   &::after {
+    content: '';
+    position: absolute; top: 0px; left: 10px;
+    width: 1px; height: 16px;
+    background: #fff;    
+    }
+  }
+    
+  } 
+  
+  }
+.container {
+  position: relative;
+  width: 85%;
+  height: 100vh;
+  background: lightblue;
+  margin-left: 15%;
+  transition: all .5s;
+  img {
+    width: 100%;
+    height: 100%;      
+    object-fit: cover;
+  } 
+  h2 {
+    margin: 25px;
+  }
+  p {
+    margin: 0 20px;
+  }
+}
+
+// scss 변수 설정
+$width : 20%;
+$height : 260px;
+
+article {  
+  float: left;
+  width: $width;height: $height;
+  transition: all .5s;
+  &:first-child {
+    
+    width: $width * 3; height: $height * 2;
+    background: #eee;
+  }
+  &:nth-child(2) {
+    width: $width * 2;
+    background: #ddd;
+  }
+  &:nth-child(3) {
+    background: #ccc;
+  }
+  &:nth-child(4) {
+    background: #bbb;
+  }
+  &:nth-child(5) {
+    background: #aaa;
+  }
+  &:nth-child(6) {
+    width: $width * 2;
+    background: #999;
+  }
+  &:nth-child(7) {
+    background: #888;
+  }
+  &:nth-child(8) {
+    background: #777;
+  }
+  &:nth-child(9) {
+    width: $width * 2;
+    background: #666;
+  }
+  &:nth-child(10) {
+    background: #555;
+  }
+  &:nth-child(11) {
+    background: #444;
+  }
+  &:last-child {
+    background: #333;
+  }
+}
+
+
+// @media screen and (min-width:1280px) and (max-width:1599px) 
+@media screen and (max-width:1599px) { 
+  
+  header {
+    position: static;
+    width: 100%;height: 100px;
+  }
+  .nav-mini {
+    width: 100%; margin-left: 0;
+  }
+  .container {
+    width: 100%; margin-left: 0;
+  }
+
+
+ }
+@media screen and (max-width:1279px) { 
+  $width : 25%;
+
+  article {
+    width: $width;
+    &:first-child {
+      width: $width * 3;
+    }
+    &:nth-child(2) {
+      width: $width;
+    }
+    &:nth-child(6) {
+      width: $width * 2;
+    }
+    &:nth-child(7) {
+      width: $width * 2;
+    }
+    &:nth-child(9) {
+      width: $width;
+    }
+    &:nth-child(10) {
+      width: $width * 2;
+    }
+  }
+
+ }
+@media screen and (max-width:1023px) { 
+  $width : 33.333%;
+
+  article {
+    width: $width;
+
+    &:first-child {
+      width: 100%; height: 400px;
+    }
+    &:nth-child(2) {
+      width: $width  * 2;
+    }
+    &:nth-child(4){
+      display: none;
+    }
+    &:nth-child(5) {
+      width: $width;
+    }
+    &:nth-child(6) {
+      width: $width * 2;
+    }
+    &:nth-child(7){
+      display: none;
+    }
+    &:nth-child(9) {
+      width: $width;
+    }
+    &:nth-child(10){
+      display: none;
+    }
+    &:nth-child(12){
+      display: none;
+    }
+  }
+
+ }
+@media screen and (max-width:779px) { 
+  $width : 50%;
+
+  article {
+    width: $width;
+    &:nth-child(2) {
+      width: 100%;
+    }
+    // 같은 요소 중 3번째 이후 모든 요소
+    &:nth-child(n+3) {
+      width: $width;
+    }
+  }
+
+ }
+@media screen and (max-width:639px) { 
+  header {
+    height: 150px;
+  }
+  .nav-mini {
+    display: none;
+  }
+
+  article {
+    height: $height - 110px;
+  }
+ }
+@media screen and (max-width:479px){ 
+  
+  header {
+    @include posX;
+    top: 0;
+    z-index: 100;
+    width: 80vw;height: 20vh;
+  }
+  .container {
+    position: fixed;top: 0;left: 0;right: 0;bottom: 0;
+    z-index: 10;
+    // width: 100vw;height: 100vh;  둘 중 하나 사용
+  }
+
+  article {
+    &:first-child {
+      width: 100vw;height: 100vh;
+    }
+    &:nth-child(n+2) {
+      display: none;
+    }
+  }
+
+ }

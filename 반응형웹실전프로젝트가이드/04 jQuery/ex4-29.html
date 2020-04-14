@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>삭제관련 관련 메서드</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var detachDiv
+            $("button:eq(0)").click(function() {
+                $("m1 a").removeAttr("href");
+                $("#m2").empty();
+                $("#m3").remove();
+                detachDiv = $("#m4").detach();
+            });
+            $("button:eq(1)").click(function() {
+                detachDiv.insertAfter("#m2");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="m1"><a href="#">링크</a></div>
+    <div id="m2">
+        <span>내용1</span>
+    </div>
+    <div id="m3">
+        <span>내용2</span>
+    </div>
+    <div id="m4">
+        <span>내용3</span>
+    </div>
+    <button>삭제</button>
+    <button>detach</button>
+</body>
+</html>

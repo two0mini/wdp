@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+    <script>
+        function Triangle(b, h) {
+            this.base = b;
+            this.height = h;
+        }
+        Triangle.prototype.area = function() {
+            return  this.base * this.height / 2;                
+        };
+        Triangle.prototype.printOut = function() {
+            return '밑변:' + this.base + ' 높이:' + this.height + ' 넓이:' + this.area(); 
+        }        
+        var triangle1 = new Triangle(30, 20);
+        console.log(triangle1.area());        
+        var triangle2 = new Triangle(80, 40);        
+        console.log(triangle2.printOut());
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>stop() 메서드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "돋움";
+            font-size: 12px;
+            color: #000;
+            text-align: center;
+        }
+        a {
+            color: #999;
+            text-decoration: none;
+            display: block;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: color 0.5s ease;
+        }
+        a.on{
+            color: #000;
+        }
+        li {
+            list-style: none;
+        }
+        #gnb {
+            display: inline-block;
+            position: relative;
+        }
+        #gnb ul li {
+            float: left;
+            height: 40px;
+            width:150px;
+            line-height: 40px;            
+        }
+        #gnb span {
+            display: block;
+            border-bottom: 2px solid #ff6600;
+            height: 40px;
+            width: 150px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var w = $("#gnb ul li").width();            
+            $("#gnb").append("<span></span>");
+            $("#gnb ul li").on("mouseenter focusin", function() {
+                var index = $(this).index(); // index() 메서드는 각 li의 index를 취득하는 메서드입니다.
+                console.log(index); // 각 li에 마우스를 오버하면 0, 1, 2, 3
+                $(this).find("a").addClass("on");
+                $(this).siblings().find("a").removeClass("on");
+                $("#gnb span").stop().animate({
+                    left: index * w // 0 * 150, 1 *  150, 2 * 150, 3 * 150
+                }, "fast", "swing");
+            });
+            $("#gnb ul li:eq(0)").trigger("mouseenter");           
+        });
+    </script>
+</head>
+<body>
+    <nav id="gnb">
+        <ul>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">Javascript</a></li>
+            <li><a href="#">jQuery</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

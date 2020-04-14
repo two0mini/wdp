@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>ANIMATION2</title> 
+<style type="text/css">
+    .ani_box {
+        position: relative;
+        width: 100px; height: 100px; 
+        background:url(img/bg_animation.png) no-repeat center;
+    }
+    .flower {
+        position: absolute; left: 10px; top: 9px;
+    }
+    .flower1 { animation: myani1 3s infinite; }
+    .flower2 { animation: myani2 3s infinite; }
+    @keyframes myani1 {
+	    0% { transform: scale(0.3, 0.3); opacity: 0.5;}
+	    100% { transform: scale(1.2, 1.2); opacity: 0;}
+	}
+    @keyframes myani2 {
+	    0% { transform: scale(0.5, 0.5); opacity: 1;}
+	    100% { transform: scale(1.4, 1.4); opacity: 0;}
+	}
+</style>
+</head> 
+<body>
+    <div class="ani_box">
+	    <img class="flower flower1" src="img/ani_spade.png" alt="flower1">
+	    <img class="flower flower2" src="img/ani_spade.png" alt="flower2">
+    </div>
+</body> 
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <!-- 반응형 페이지 뷰포트 설정 -->
+  <meta name="apple-mobile-web-app-title" content="OCI" />
+  <title>OCI</title>
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"> 
+  <link rel="stylesheet" href="./dist/css/module/slick.css" />  <!-- 이미지 슬라이드 -->
+  <link rel="stylesheet" href="./dist/css/module/slick-theme.css" />  <!-- 이미지 슬라이드 테마 -->
+  <link rel="stylesheet" type="text/css" href="./dist/css/comm.css">   <!-- my css -->
+  <script src="./dist/js/module/jquery.min.js"></script>   <!-- 필수 jQuery -->
+  <script src="./dist/js/module/slick.min.js"></script>  <!-- 이미지슬라이드 -->
+  <script src="./dist/js/module/jquery.scrollUp.min.js"></script> <!-- scroll top -->
+  <script src="./dist/js/comm.js"></script> <!-- my js -->
+  <!-- ie9 이하 버전에서 잘 보이도록 추가 -->
+  <!--[if lt IE 9]>
+  	<script src="./dist/js/module/html5.js"></script>
+  	<script src="./dist/js/module/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div id="skipnavigation">
+    <a href="#gnb"><span>주요메뉴 바로가기</span></a>
+    <a href="#main"><span>본문 바로가기</span></a>
+    <a href="#login"><span>로그인 바로가기</span></a>
+  </div>
+  <div class="wrap">
+    <!-- header -->
+    <header>
+      <div class="inner_header">
+        <h1>
+          <a href="#">OCI</a>
+        </h1>
+        <nav>
+          <div class="nav-bg"></div>
+          <a href="#" class="nav-bar" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </a>          
+
+          <!-- <script>
+          function myFunction(x) {
+            x.classList.toggle("change");
+          }
+          </script> -->
+          <div class="nav-wrap">
+            <a href="#" class="nav-close">
+              <i class="las la-arrow-left"></i> 
+              <span class="blind">닫기</span> 
+            </a>
+            <div class="nav-service">
+              <div class="f_l">
+                <a href="#">SITEMAP</a>
+                <a href="#">CONTACT US</a>
+              </div>
+              <div class="f_r">
+                <a href="#">KO</a>
+                <a href="#">EN</a>
+                <a href="#">CH</a>
+              </div>
+            </div>
+            <ul class="nav-depth1">
+              <li>
+                <a href="#">회사소개</a>
+                <ul class="nav-depth2">
+                  <li><a href="#">인사말</a></li>
+                  <li><a href="#">기업 소개</a></li>
+                  <li><a href="#">비전</a></li>
+                  <li><a href="#">연혁</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">사업분야</a>
+                <ul class="nav-depth2">
+                  <li><a href="#">Basic Chemicals</a></li>
+                  <li><a href="#">Bio Businesses</a></li>
+                  <li><a href="#">제품검색</a></li>
+                  <li><a href="#">고객센터</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">투자정보</a>
+                <ul class="nav-depth2">
+                  <li><a href="#">공시정보</a></li>
+                  <li><a href="#">IR활동</a></li>
+                  <li><a href="#">IR자료실</a></li>
+                  <li><a href="#">추가정보</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">지속가능경영</a>
+                <ul class="nav-depth2">
+                  <li><a href="#">사회공헌</a></li>
+                  <li><a href="#">윤리경영</a></li>
+                  <li><a href="#">안전/환경 경영</a></li>
+                  <li><a href="#">지속가능경영보고서</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">홍보센터</a>
+                <ul class="nav-depth2">
+                  <li><a href="#">뉴스</a></li>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">PR자료실</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">인재채용</a>
+                <ul class="nav-depth2">
+                  <li><a href="#">채용공고</a></li>
+                  <li><a href="#">인재상</a></li>
+                  <li><a href="#">인재 육성</a></li>
+                  <li><a href="#">채용 절차</a></li>
+                  <li><a href="#">직무소개</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+        </nav>
+      </div>
+    </header>
+    <!-- //header -->
+    <!-- slide -->
+    <div class="slide-main">
+      <div>
+        <img src="./images/slide1.jpg" alt="">
+        <div class="txt-ani">
+          <span>CORPORATE SOCIAL RESPONSIBILITY</span>
+          <b>Embracing diversity for shared growth</b>
+          <a href="#" class="link-more">see more</a>
+        </div>
+      </div>
+      <div>
+        <img src="./images/slide2.jpg" alt="">      
+        <div class="txt-ani">
+          <span>Basic Chemicals</span>
+          <b>Creates elements for a better world</b>
+          <a href="#" class="link-more">see more</a>
+        </div>
+      </div>
+      <div>
+        <img src="./images/slide3.jpg" alt="">
+        <div class="txt-ani">
+          <span>Petrochemicals & Carbon Materials</span>
+          <b>Provides solutions for a better world</b>
+          <a href="#" class="link-more">see more</a>
+        </div>
+      </div>
+    </div>
+    <!-- /slide -->
+
+    <!-- container -->
+    <div class="container">
+      <div class="contents">
+        <!-- businesses -->
+        <div class="sec_g sec_busi">
+          <h2>businesses</h2>
+          <div class="cont_g">
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="./images/b1.jpg" alt="Basic Chemicals">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/b2.jpg" alt="Petro Chemicals and Chrbon Materials">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/b3.jpg" alt="Energy solutions">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- news -->
+        <div class="sec_g sec_news">
+          <h2>news</h2>
+          <div class="cont_g">
+            <ul>
+              <li>
+                <a href="#">
+                  <div class="col-left">
+                    <img src="./images/news1.jpg" alt="">
+                  </div>
+                  <div class="col-right">
+                    
+                    <strong><em>[공지]</em>OCI, '자회사형 장애인표준 사업장' 설립 추진</strong>
+                    <p>OCI가 '자회사형 장애인표준사업장' 설립을 추진하며 장애인들을 위한 양질의 일자리 마련에 나선다.</p>
+                    <span>READ MORE</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="col-left">
+                    <img src="./images/news2.jpg" alt="">
+                  </div>
+                  <div class="col-right">
+                    <strong><em>[공지]</em>OCI, 포스코케미칼과 화학사업 강화 위한 전략적 제휴</strong>
+                    <p>에너지, 화학전문기업 OCI가 포스코케미칼과 손잡고 기존사업 역량 강화와 새로운 사업 확대에 본격적으로 나선다.</p>
+                    <span>READ MORE</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="col-left">
+                    <img src="./images/news3.jpg" alt="">
+                  </div>
+                  <div class="col-right">
+                    <strong>OCI, 백우석 회장 승진 이우현 부회장, 김택중 사장 선임...</strong>
+                    <p>OCI (대표 백우석)는 3월 26일 주주총회 후 이사회를 갖고, 백우석 부회장을 회장에, 이후현 사장을 부회장에 각각 선임하고, 최고운영자로...</p>
+                    <span>READ MORE</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- notice -->
+        <div class="sec_g sec_notice">
+          <h2>notice</h2>
+          <div class="cont_g">
+            <ul class="lst_notice">
+               
+              <li><a href="#"><span>2019 2Q 경영실적자료</span></a></li>
+              <li><a href="#"><em>PR자료</em><br><span class="btn_more">+더보기</span></a></li>
+              <li><a href="#"><em>재무정보</em><br><span class="btn_more">+더보기</span></a></li>
+              <li><a href="#"><em>IR자료실</em><br><span class="btn_more">+더보기</span></a></li>
+              <li>
+                <ul class="lst_notice2">
+                  <li><a href="#">Annual Report</a></li>
+                  <li><a href="#">IR Report</a></li>
+                  <li><a href="#">IR Fact Book</a></li>
+                </ul>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        
+        <!-- 인재채용 -->
+        <div class="sec_g sec_incu">
+          <h2>인재채용</h2>
+          <div class="cont_g">
+            <dl>
+              <dt>인재상</dt>
+              <dd>Chance</dd>
+              <dd>Chellenge</dd>
+              <dd>Change</dd>
+            </dl>
+            <p>OCI의 인재는 핵심가치인 기회,도전,변화를 갖추고 행동으로 실천하는 사람입니다. <span>+더보기</span></p>
+             <a href="#">채용사이트 바로가기</a>
+          </div>
+        </div>
+
+           <!-- 바로가기 -->
+           <div class="sec_g sec_goto">
+            <h2 class="blind">바로가기</h2>
+            <div class="cont_g">
+             <ul>
+               <li><a href="#"><i class="las la-users"></i>사회공헌</a></li>
+               <li><a href="#"><i class="las la-laugh"></i>윤리경영</a></li>
+               <li><a href="#"><i class="las la-atom"></i>안전경영</a></li>
+               <li><a href="#"><i class="las la-leaf"></i>환경경영</a></li>
+               <li><a href="#"><i class="las la-lightbulb"></i>지속가능경영 보고서</a></li>
+             </ul>
+            </div>
+          </div>
+
+      </div>
+    </div>
+    <!-- //container -->
+    <!-- footer -->
+    <footer id="footer_wrap">
+      <div class="footer">
+        <div class="foo_lef">
+          <img src="./images/logo.png" alt="oci 로고" />
+          <p class="foo_add">
+            100-718 서울시 중구 소공로 94 OCI빌딩<br />
+            COPYRIGHT@2018 OCI COMPANY Ltd.ALL RIGHTS RESERVED
+          </p>
+        </div>
+        <!-- foo_lef : e  -->
+        <div class="foo_rit">
+          <ul>
+            <!-- <li class="first"><a href="/sub/utility/policy.asp">개인정보처리방침</a></li> -->
+            <li>
+              <div class="select wid">
+                <button type="button" class="my_value">FAMILY SITE <span class="ctrl"><i class="las la-caret-down"></i></span></button>
+                
+               </div>
+            </li>
+            <ul class="lang">       
+            <li><a href="#" class="lang_select">KO</a></li>
+            <li><a href="#" class="lang_select">EN</a></li>
+            <li><a href="#" class="lang_select">CN</a></li>
+          </ul> 
+          </ul>
+        </div>
+        <!-- foo_rit -->
+      </div>
+      <!-- footer : e  -->
+    </footer>
+    <!-- //footer -->
+
+  </div>
+
+<script>
+  $(function () {
+  $.scrollUp({
+    scrollName: 'scrollUp', // Element ID
+    topDistance: '300', // Distance from top before showing element (px)
+    topSpeed: 300, // Speed back to top (ms)
+    animation: 'fade', // Fade, slide, none
+    animationInSpeed: 200, // Animation in speed (ms)
+    animationOutSpeed: 200, // Animation out speed (ms)
+    scrollText: 'Scroll to top', // Text for element
+    activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+  });
+});
+</script>
+
+</body>
+
+</html>

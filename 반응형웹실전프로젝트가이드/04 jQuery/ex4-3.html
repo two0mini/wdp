@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>기본 선택자</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("p").css("border", "4px solid red");
+            $("#gnb").css("border", "4px solid orange");
+            $(".logo").css("border", "4px solid yellow");
+            $("#gnb > ul > li").css("border", "4px solid green");
+            $("#gnb ul").css("border", "4px solid blue");
+            $("#visual + #content").css("border", "4px solid navy");
+            $("#visual ~ #footer").css("border", "4px solid purple");
+            $("div.util").css("border", "4px solid pink");
+            $(".left,.right,#banner").css("border", "4px solid gray");
+        });
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div class="logo">로고</div>
+        <div class="util">회원가입</div>
+        <nav id="gnb">
+            <ul>
+                <li>메뉴1
+                    <ul>
+                        <li>메뉴1_1</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="visual">
+            <p>비주얼</p>
+        </div>
+        <div id="content">
+            <div class="left">왼쪽</div>
+            <div class="right">
+                <div class="util">오른쪽</div>
+            </div>
+        </div>
+        <div id="banner">배너</div>
+        <footer id="footer">푸터</footer>
+    </header>
+</body>
+</html>

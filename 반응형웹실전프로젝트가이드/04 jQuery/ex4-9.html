@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>visibility 필터 선택자</title>
+    <style>
+        #vis {
+            display: none;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            console.log($("div:hidden").text());
+            $("div:visible").css("background", "orange");
+        });
+    </script>
+</head>
+<body>
+    <div id="vis">내용1</div>
+    <div>내용2</div>
+</body>
+</html> 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기타 탐색 선택자</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#m1 > div").add("#m1 > p").css("border", "2px solid red");
+            $("#m2").children("p").addBack().css("border", "2px solid orange");
+            $("#m3").find("span").css("border", "2px solid yellow").end().find("em").css("border", "2px solid green");
+            if ($("#m4").children().is("p")) {
+                console.log("p 요소가 존재합니다.");
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="m1">
+        <div>내용1_1</div>
+        <p>내용1_2</p>
+    </div>
+    <div id="m2">
+        <p>내용2</p>
+    </div>
+    <div id="m3">
+        <span>내용3_1</span ><em>내용3_2</em>
+    </div>
+    <div id="m4">
+        <p>내용4<p>
+    </div>
+</body>
+</html> 

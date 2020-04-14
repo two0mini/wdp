@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>flexbox</title> 
+<style type="text/css">
+    .flexbox {
+        display: flex;
+        display: -webkit-flex;
+        height: 200px;
+        background: #ccc;
+        align-items: flex-start;
+        -webkit-align-items: flex-start;
+    }
+    .flexbox > div {
+        flex: 1;
+        -webkit-flex: 1;
+        background: darkblue;
+        margin: 10px;
+        font-size: 20px;
+        color:#fff;
+    }
+    .flexbox > div:nth-child(3) {
+        align-self: flex-end;
+        -webkit-align-self: flex-end;
+    }
+</style>
+</head>
+<body>
+    <div class="flexbox">
+        <div><img src="img/flex.png" alt="flex"></div>
+        <div><img src="img/flex.png" alt="flex"></div>
+        <div><img src="img/flex.png" alt="flex"></div>
+        <div><img src="img/flex.png" alt="flex"></div>
+        <div><img src="img/flex.png" alt="flex"></div>
+    </div>
+</body>

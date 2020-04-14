@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>$.ajax() 메서드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1,
+        h2 {
+            font-family: "굴림";
+            font-size: 14px;
+            margin-bottom: 10px;
+        }      
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        #wrap {
+            width: 204px;
+            margin: 20px auto;
+            text-align: center;            
+        }
+        #vis {
+            width: 204px;
+            height: 280px;
+            overflow: hidden;
+        }
+        #vis .subject {
+            width: 860px;
+            text-align: center;
+            overflow: hidden
+        }
+        #vis .subject > div {            
+            border: 2px solid #ff6600;
+            float: left;            
+            border-radius: 10px;
+            padding: 10px 0;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        // 이부분에 코드를 작성합니다.
+        $(document).ready(function() {
+            var roll;
+            function play() {
+                roll = setInterval(function() {
+                    $(".subject > div:first").insertAfter($(".subject > div:last"));
+                }, 2000);
+            }
+            function stop() {
+                clearInterval(roll);
+            }
+            $("#vis").hover(function() {
+                stop();
+            }, function() {
+                play();
+            });
+            play();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>반응형 웹 교과목</h1>
+        <div id="vis">
+            <div class="subject"></div>
+        </div>
+    </div>
+</body>
+</html>

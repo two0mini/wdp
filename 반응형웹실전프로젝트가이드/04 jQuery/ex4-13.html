@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>each() 메서드</title>    
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+           $("div").each(function(index, element) {
+               console.log(index); // li 요소의 index 값, 0(첫 번째 요소) 부터 시작
+               console.log(element); // li 요소 자신 
+               console.log($(this).attr("class")); // li 요소 각각의 class를 취득
+           }); 
+        });
+    </script>
+</head>
+<body>
+    <div class="m1">내용1</div>
+    <div class="m2">내용2</div>
+    <div class="m3">내용3</div>
+</body>
+</html>

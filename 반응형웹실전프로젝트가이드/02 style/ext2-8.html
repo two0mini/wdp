@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>flexbox</title> 
+<style type="text/css">
+    ul {padding:0; margin:0;}
+    li {list-style-type: none;}
+    h1 {padding: 10px 20px; background: darkblue; color:#fff; font-size: 20px;}
+    .gnb {
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    }
+    .gnb > li {
+        flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        margin: 2px;
+    }
+    .gnb li a {
+        display: block; padding: 10px; text-decoration: none; 
+        background: lightblue; color: darkblue;
+    }    
+    @media all and (min-width:768px) {
+        .gnb {
+            flex-direction: row;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            justify-content: space-around;
+            -webkit-justify-content: space-around;
+            background: lightblue;
+        }
+        .gnb > li {
+            flex: 0 0 80px;
+            -webkit-flex: 0 0 80px;
+            -ms-flex: 0 0 80px;
+            margin: 10px;
+        }
+        .gnb li a {padding: 0;}
+    }
+    @media all and (min-width:1025px) {
+        .gnb {
+            justify-content: flex-start;
+            -webkit-justify-content: flex-start;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+       <h1>regarding FLEX...</h1>
+        <ul class="gnb">
+            <li><a href="#">company</a></li>
+            <li><a href="#">service</a></li>
+            <li><a href="#">custommer</a></li>
+            <li><a href="#">community</a></li>
+        </ul>
+    </header>
+</body>

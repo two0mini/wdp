@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>속성 추가</title>
+    <style>
+        div {
+            position: fixed;
+            left: 100px;
+            top: 10px;
+            width: 200px;
+            height: 200px;
+            background: #718c00;
+        }
+    </style>
+    <script>
+        function createEle() {
+            var bt = document.getElementById('bt');
+            function popup() {
+                var div = document.createElement('div');
+                var a = document.createElement('a');
+                var txt = document.createTextNode('아이콕스');
+                a.appendChild(txt);
+                a.setAttribute('href', 'http://icoxpublish.com');
+                a.setAttribute('target', '_blank');
+                a.setAttribute('title', '새창');                    
+                div.appendChild(a);
+                document.body.appendChild(div);
+            }
+            bt.onclick = popup;
+        }
+        addEventListener('load', createEle);
+    </script>
+</head>
+<body>
+    <button id="bt">요소생성</button>
+</body>
+</html>

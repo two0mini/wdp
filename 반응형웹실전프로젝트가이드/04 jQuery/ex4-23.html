@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>widht, height 관련 메서드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {           
+            padding: 20px;
+            margin: 20px;
+            background: #ff6600;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <!-- <script>
+        $(document).ready(function() {
+            $("div").width(150).height(150);
+            console.log("width " + $("div").width());
+            console.log("height " + $("div").height());
+            console.log("innerWidth " + $("div").innerWidth());
+            console.log("innerHeight " + $("div").innerHeight());
+            console.log("outerWidth " + $("div").outerWidth(true));
+            console.log("outerHeight " + $("div").outerHeight(true));
+        });
+    </script> -->
+ <!-- <script> 
+    $(function(){
+        $("div").width(150).height(150);
+
+    })
+         
+
+</script> -->
+
+</head>
+<body>
+    <div>내용</div>
+    <script>
+        $("div").width(150).height(150);
+        console.log(`width: ${$("div").width()}`)
+        console.log(`height: ${$("div").height()}`)
+        console.log(`innerWidth: ${$("div").innerWidth()}`)
+        console.log(`innerHeight: ${$("div").innerWidth()}`)
+        console.log(`outerWidth: ${$("div").outerWidth()}`)
+        console.log(`outerHeight: ${$("div").outerHeight()}`)
+
+    </script>
+</body>
+</html>

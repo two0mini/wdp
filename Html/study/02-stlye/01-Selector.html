@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>selector</title>
+
+    <link rel="stylesheet" href="./dist/css/comm.css">
+
+    <style>
+        h1 {
+            font-size: 50px;
+            color: blue;
+        }
+
+        ul.ist-nav {
+            background: yellow;
+        }
+
+        ul.ist-nav>li {
+            background: blue;
+        }
+
+        ul>li>ul>li {
+            background: green;
+        }
+
+        ul ul li {
+            border: 1px solid #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 id="logo">selector</h1>
+
+    <p class="txt">css를 선택하는 방법</p>
+
+    <ul class="lst-nav">
+        <li>
+            <a href="#">메뉴1</a>
+            <ul>
+                <li>메뉴1-1</li>
+                <li>메뉴1-2</li>
+                <li>메뉴1-3</li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="lst-nav">
+        <li>
+            <a href="#">메뉴2</a>
+            <ul>
+                <li>메뉴2-1</li>
+                <li>메뉴2-2</li>
+                <li>메뉴2-3</li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="lst-nav">
+        <li>
+            <a href="#">메뉴3</a>
+            <ul>
+                <li>메뉴3-1</li>
+                <li>메뉴3-2</li>
+                <li>메뉴3-3</li>
+            </ul>
+        </li>
+    </ul>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>삽입 관련 메서드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "굴림", sans-serif;
+            font-size: 12px;
+        }
+        #wrap {
+            width: 200px;
+            margin: 20px auto;
+        }
+        #wrap .page {
+            text-align: right;
+            margin-bottom: 5px;
+        }
+        #wrap .page .page_n {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        #wrap .page button {
+            border: none;
+            background: #666;
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            line-height: 1.5;
+            overflow: hidden;
+        }
+        #wrap .vis {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #505900;
+            overflow: hidden;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var totalNum = $(".vis > div").length // 4
+            var currentNum = 1;            
+            // 이부분에 코드를 작성합니다.           
+            $(".next_b").click(function() {
+                // 이부분에 코드를 작성합니다.
+            });
+             $(".prev_b").click(function() {
+                // 이부분에 코드를 작성합니다.
+            });            
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="page">
+            <span class="page_n">
+                <span></span> / <span></span>
+            </span>
+            <button class="prev_b">&lt; 이전</button>
+            <button class="next_b">&gt; 다음</button>
+        </div>
+        <div class="vis">
+            <div><a href="#"><img src="1.jpg" alt="HTML"></a></div>
+            <div><a href="#"><img src="2.jpg" alt="CSS"></a></div>
+            <div><a href="#"><img src="3.jpg" alt="Javascript"></a></div>
+            <div><a href="#"><img src="4.jpg" alt="jQuery"></a></div>
+        </div>
+    </div>
+</body>
+</html>

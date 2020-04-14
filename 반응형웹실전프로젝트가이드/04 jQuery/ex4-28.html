@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>스크롤 관련 메서드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            height: 2000px;
+        }
+        #up{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;   
+            transition: all 0.5s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        #up.on{
+            opacity: 1;    
+            visibility: visible;
+        }
+        #up a{
+            display: block;
+            padding: 20px;
+            text-align: center;            
+            background: #333;
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var isOn = false;
+            $(window).scroll(function() {
+               if($(this).scrollTop() > 100){
+                   if(!isOn) {
+                    $("#up").addClass("on");
+                       isOn = true;
+                   }                   
+               }else{
+                   if(isOn) {
+                       $("#up").removeClass("on");
+                       isOn = false;
+                   }                   
+               }
+            });
+            $("#up a").click(function() {
+                $(window).scrollTop(0);                
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap"></div>
+    <div id="up"><a href="javascript:;">TOP</a></div>
+</body>
+</html>

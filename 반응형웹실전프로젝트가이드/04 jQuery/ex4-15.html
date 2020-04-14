@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>text() 메서드</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            console.log($("#m1").text());       
+            $("#m1").text("responsive web");
+            $("#m2 > div").text(function(index, text) {
+                return "div 요소의 텍스트는 " + text +", index는 " + index;
+            });
+        });
+    </script>
+</head>
+<body>   
+    <div id="m1">jQuery</div>
+    <div id="m2">
+        <div>html</div>
+        <div>css</div>
+        <div>javascript</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Date 객체</title>
+    <script>
+        var dateObj = new Date(2022, 9, 30, 10, 30);        
+        var dateInfo = {
+            year: dateObj.getFullYear(),
+            month: dateObj.getMonth() + 1,
+            date: dateObj.getDate(),
+            hours: dateObj.getHours(),
+            minutes: dateObj.getMinutes(),
+            nowDate : dateObj.toUTCString()
+        }
+        for(var i in dateInfo) {
+            console.log(i + ':' + dateInfo[i]);
+        }        
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>배경이미지의 영역</title> 
+<style type="text/css">
+    div { 
+        width:550px; padding:25px; margin-bottom:20px;
+        border:15px double rgba(0,0,0,0.6); 
+        background:#e5cadd;
+    }
+    .clip1 { background-clip: border-box; }
+    .clip2 { background-clip: padding-box; }
+    .clip3 { background-clip: content-box; }
+</style>
+</head> 
+<body>
+    <div class="clip1">It's impossible not only starting good but also keeping it firm!!</div>
+    <div class="clip2">It's impossible not only starting good but also keeping it firm!!</div>
+    <div class="clip3">It's impossible not only starting good but also keeping it firm!!</div>
+</body> 
+</html>

@@ -1,0 +1,56 @@
+@mixin posX {
+	position: absolute;left: 50%;transform: translateX(-50%);
+}
+@mixin ell {
+	display: inline-block;overflow: hidden;
+	text-overflow: ellipsis;white-space: nowrap;vertical-align: middle;
+}
+@mixin img_g {
+	display: inline-block;
+	background-image: url(../../images/comm/img-comm.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+}
+
+@mixin border_blue {
+	border: 1px solid $border_color;
+	border-top: 1px solid #19a0cf;
+}
+
+@mixin ico_square {
+	position: relative;
+	padding-left: 12px;
+	&::before {
+		content: '';
+		position: absolute;top: 8px;left: 0;
+		width: 3px;height: 3px;
+		background: #555;
+	}
+}
+@mixin ico_square_blue {
+	position: relative;
+	padding-left: 12px;
+	&::before {
+		content: '';
+		position: absolute;top: 8px;left: 0;
+		width: 3px;height: 3px;
+		background: $cerulean;
+	}
+}
+
+@mixin dotum {
+	font-family: 'Dotum';font-size: 0.800rem;
+}
+
+/* clearfix */
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}

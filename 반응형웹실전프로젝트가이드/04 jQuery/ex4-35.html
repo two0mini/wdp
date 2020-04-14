@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>폼 관련 이벤트</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+        input[type=text].on {
+            background: #ff6600;
+            color: #fff;
+        }
+        p{
+            color: #ff0000;
+            display: none;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 이부분에 코드를 작성합니다. 
+        });
+    </script>
+</head>
+<body>
+    <div id="m1">
+        <input type="text" placeholder="값을 입력하세요.">
+    </div>
+    <div id="m2">
+        <input type="text" placeholder="값을 입력하세요.">
+    </div>
+    <div id="m3">
+        <span>값을 수정한 후 다음 입력요소로 이동하세요.</span>
+        <input type="text" value="10">
+    </div>
+    <div id="m4">
+        <input type="text" value="텍스트를 드래하세요.">
+    </div>
+    <form action="#" class="frm">
+        <fieldset>
+            <legend>로그인</legend>
+            <div>
+                <label for="id">아이디</label><input type="text" id="id">
+            </div>
+            <p class="msg1">아이디를 입력하세요!</p>
+            <div>
+                <label for="pw">비밀번호</label><input type="password" id="pw">
+            </div>
+            <p class="msg2">비밀번호를 입력하세요!</p>
+            <button>전송</button>
+        </fieldset>
+    </form>
+</body>
+</html>

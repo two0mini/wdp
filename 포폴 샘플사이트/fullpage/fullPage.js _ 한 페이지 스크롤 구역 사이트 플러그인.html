@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://alvarotrigo.com/fullPage/ko/# -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" class="fp-enabled" style="overflow: hidden; height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>fullPage.js | 한 페이지 스크롤 구역 사이트 플러그인</title>
+    <meta name="author" content="Alvaro Trigo Lopez">
+    <meta name="description" content="Alvaro 제작 플러그인. 전체화면 페이지를 빠르고 손쉽게 만듭니다. 한 페이지 스크롤 구역. 마우스 스냅.">
+    <meta name="keywords" content="전체화면, 화면, 전체, 스냅, 스냅핑, 스크롤, 구역">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:title" content="fullPage 스크롤 스냅핑. 전체 화면 페이지를 빠르고 간편하게 만들어 보세요">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="구역과 슬라이드를 스냅하는 끝내주는 라이브러리입니다. 빠르고 간편합니다.">
+    <meta property="og:image" content="https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/intro.png">
+    <meta property="og:url" content="https://alvarotrigo.com/fullPage/">
+    <meta name="twitter:card" content="photo">
+    <meta name="twitter:site" content="@imac2">
+    <meta name="twitter:creator" content="@imac2">
+    <meta name="twitter:title" content="fullPage.js">
+    <meta name="twitter:description" content="전체화면 스크롤 웹사이트를 만드는 훌륭한 자바스크립트 라이브러리입니다.">
+    <meta name="twitter:image" content="https://alvarotrigo.com/fullPage/imgs/share.png">
+    <meta name="twitter:url" content="https://alvarotrigo.com/fullPage/">
+    <meta name="Resource-type" content="Document">
+
+    <link rel="canonical" href="https://alvarotrigo.com/fullPage/ko/">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://alvarotrigo.com/fullPage/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="https://alvarotrigo.com/fullPage/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://alvarotrigo.com/fullPage/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://alvarotrigo.com/fullPage/favicons/manifest.json">
+    <link rel="mask-icon" href="https://alvarotrigo.com/fullPage/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://alvarotrigo.com/fullPage/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="fullPage.js">
+    <meta name="application-name" content="fullPage.js">
+    <meta name="msapplication-config" content="https://alvarotrigo.com/fullPage/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="dns-prefetch" href="https://ajax.googleapis.com/">
+    <link rel="dns-prefetch" href="https://ghbtns.com/">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com/">
+    <link rel="dns-prefetch" href="https://connect.facebook.net/">
+
+
+    <link rel="alternate" href="https://alvarotrigo.com/fullPage/" hreflang="en">
+    <link rel="alternate" href="https://alvarotrigo.com/fullPage/zh/" hreflang="zh">
+    <link rel="alternate" href="https://alvarotrigo.com/fullPage/ko/" hreflang="ko">
+    <link rel="alternate" href="https://alvarotrigo.com/fullPage/es/" hreflang="es">
+    <link rel="alternate" href="https://alvarotrigo.com/fullPage/ru/" hreflang="ru">
+
+    <style type="text/css">/*!
+ * fullPage 3.0.7
+ * https://github.com/alvarotrigo/fullPage.js
+ *
+ * @license GPLv3 for open source use only
+ * or Fullpage Commercial License for commercial use
+ * http://alvarotrigo.com/fullPage/pricing/
+ *
+ * Copyright (C) 2018 http://alvarotrigo.com/fullPage - A project by Alvaro Trigo
+ */
+.fp-enabled body,html.fp-enabled{margin:0;padding:0;overflow:hidden;-webkit-tap-highlight-color:transparent}.fp-section{position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.fp-slide{float:left}.fp-slide,.fp-slidesContainer{height:100%;display:block}.fp-slides{z-index:1;height:100%;overflow:hidden;position:relative;-webkit-transition:all .3s ease-out;transition:all .3s ease-out}.fp-section.fp-table,.fp-slide.fp-table{display:table;table-layout:fixed;width:100%}.fp-tableCell{display:table-cell;vertical-align:middle;width:100%;height:100%}.fp-slidesContainer{float:left;position:relative}.fp-controlArrow{-webkit-user-select:none;-moz-user-select:none;-khtml-user-select:none;-ms-user-select:none;position:absolute;z-index:4;top:50%;cursor:pointer;width:0;height:0;border-style:solid;margin-top:-38px;-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.fp-controlArrow.fp-prev{left:15px;width:0;border-width:38.5px 34px 38.5px 0;border-color:transparent #fff transparent transparent}.fp-controlArrow.fp-next{right:15px;border-width:38.5px 0 38.5px 34px;border-color:transparent transparent transparent #fff}.fp-scrollable{position:relative}.fp-scrollable,.fp-scroller{overflow:hidden}.iScrollIndicator{border:0!important}.fp-notransition{-webkit-transition:none!important;transition:none!important}#fp-nav,.fp-slidesNav{opacity:1;-webkit-transform:translate3d(0,0,0)}#fp-nav{margin-top:-32px;top:50%;position:fixed;z-index:100}#fp-nav.fp-right{right:17px}#fp-nav.fp-left{left:17px}.fp-slidesNav{position:absolute;z-index:4;-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0);left:0!important;right:0;margin:0 auto!important}.fp-slidesNav.fp-bottom{bottom:17px}.fp-slidesNav.fp-top{top:17px}#fp-nav ul,.fp-slidesNav ul{margin:0;padding:0}#fp-nav ul li,.fp-slidesNav ul li{display:block;width:14px;height:13px;margin:7px;position:relative}.fp-slidesNav ul li{display:inline-block}#fp-nav ul li a,.fp-slidesNav ul li a{display:block;position:relative;z-index:1;width:100%;height:100%;cursor:pointer;text-decoration:none}#fp-nav ul li a.active span,#fp-nav ul li:hover a.active span,.fp-slidesNav ul li a.active span,.fp-slidesNav ul li:hover a.active span{height:12px;width:12px;margin:-6px 0 0 -6px;border-radius:100%}#fp-nav ul li a span,.fp-slidesNav ul li a span{border-radius:50%;position:absolute;z-index:1;height:4px;width:4px;border:0;background:#333;left:50%;top:50%;margin:-2px 0 0 -2px;-webkit-transition:all .1s ease-in-out;-moz-transition:all .1s ease-in-out;-o-transition:all .1s ease-in-out;transition:all .1s ease-in-out}#fp-nav ul li:hover a span,.fp-slidesNav ul li:hover a span{width:10px;height:10px;margin:-5px 0 0 -5px}#fp-nav ul li .fp-tooltip,.fp-sr-only{position:absolute;overflow:hidden;white-space:nowrap}#fp-nav ul li .fp-tooltip{top:-2px;color:#fff;font-size:14px;font-family:arial,helvetica,sans-serif;max-width:220px;display:block;opacity:0;cursor:pointer;width:0}#fp-nav ul li:hover .fp-tooltip,#fp-nav.fp-show-active a.active+.fp-tooltip{-webkit-transition:opacity .2s ease-in;transition:opacity .2s ease-in;width:auto;opacity:1}#fp-nav ul li .fp-tooltip.fp-right{right:20px}#fp-nav ul li .fp-tooltip.fp-left{left:20px}.fp-auto-height .fp-slide,.fp-auto-height .fp-tableCell,.fp-auto-height.fp-section,.fp-responsive .fp-auto-height-responsive .fp-slide,.fp-responsive .fp-auto-height-responsive .fp-tableCell,.fp-responsive .fp-auto-height-responsive.fp-section{height:auto!important}.fp-sr-only{width:1px;height:1px;padding:0;clip:rect(0,0,0,0);border:0}</style>
+
+    <style id="stylesheet-critical" type="text/css">@CHARSET "ISO-8859-1";blockquote,body,dd,div,dl,dt,fieldset,form,h2,h3,h4,h5,h6,input,li,ol,p,pre,td,textarea,th,ul{padding:0;margin:0}a{text-decoration:none}table{border-spacing:0}abbr,acronym,fieldset,img{border:0}address,caption,cite,code,dfn,em,th,var{font-weight:400;font-style:normal}h1,strong{font-weight:700}strong{font-style:normal}ol,ul{list-style:none}caption,th{text-align:left}h1{padding:0;font-size:8em;margin:0 0 .25em}h2,h3,h4,h5,h6{font-weight:400;font-size:100%}q:after,q:before{content:''}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#fullpage,.section,body,html{height:100%}body,html{overflow:hidden}.section.fp-table{display:table;table-layout:fixed;width:100%}.fp-tableCell{display:table-cell;vertical-align:middle;width:100%;height:100%}.examples,.fp-slidesNav.bottom{display:none}body{font-family:arial,helvetica;color:#fff}[data-lang=ru] h1{font-size:6em}#section-1 h2,.intro p{-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased}.intro p{max-width:-webkit-calc(30em - (1.3em*2));max-width:calc(30em - (1.3em*2));margin-right:auto;margin-left:auto;padding-right:1.3em;padding-left:1.3em;font-size:1.5em}#fp-nav ul li a span,#menu-line,.fp-slidesNav ul li a span{background:#fff}.section,.twitter-share i,.wrap{position:relative}.section{text-align:center}.wrap{margin-left:auto;margin-right:auto;width:960px}#menu-line{position:absolute;top:24px;left:0;width:101px;height:2px;transition:all 600ms ease}#menu{position:fixed;top:20px;right:20px;z-index:70;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;letter-spacing:1px;font-size:1.1em}#menu li{display:inline-block;margin:10px 0}#menu a{color:#fff;padding:0 1.1em 1.1em}.menu-active{font-weight:700}#menu-theme-mobile,.menu-sub{display:none}.menu-sub li{display:block}.plugins{visibility:hidden;position:absolute}#section-1{background:#ff5f45}#section-1 h1{font-size:10em;font-weight:900;color:#fff}#section-1 h2{color:rgba(255,255,255,.7);font-size:1.73em;font-weight:100;margin:-10px 30px 10px}#section-1 li,.github-data{display:inline-block;margin:1.25em .3em}.section-1-button{padding:.93em 1.87em;background:#fff;border-radius:5px;display:block;color:#ff5f45}#download a{background:#004f69;color:#fff}.section-1-usedBy{background-image:url(https://alvarotrigo.com/fullPage/imgs/trusted-by.png);width:80%;max-width:536px;height:36px;display:block;margin:0 auto;position:absolute;bottom:20px;left:0;right:0}.language{position:absolute;left:20px;top:14px;z-index:99;opacity:1}.languages{display:none}.language-current{margin:15px 0 6px 15px;z-index:99;cursor:pointer}.flag{width:35px;height:24px;display:inline-block;margin:0 17px 0 0;vertical-align:middle;background-image:url(https://alvarotrigo.com/fullPage/imgs/flags.png)}.flag-chinese{background-position:0 0}.flag-english{background-position:-35px 0}.flag-russian{background-position:-70px 0}.flag-korean{background-position:-105px 0}.flag-spanish{background-position:-140px 0}.language-triangle{position:absolute;top:22px;left:3px;fill:#fff;height:6px;width:8px}.twitter-share i{vertical-align:middle;display:inline-block;width:38px;height:14px;color:#fff;top:-4px;left:-2px;fill:#fff}.twitter-share svg{height:40px;margin-top:-10px}@media screen and (max-width:1135px){.fp-tableCell{font-size:.9em}.examples-wrapper{top:100px;-webkit-transform:none;transform:none}}@media screen and (max-width:1050px){.fp-tableCell{font-size:.85em}}@media screen and (max-width:1030px){#section-3 .intro{width:40%}.shell{width:calc(60% - 54px)}}@media screen and (max-width:900px){#section-3 .intro{display:block;text-align:center;width:100%}#section-3 .intro p{display:none}.shell{width:80%;margin:0}#menu{text-align:center;left:0;right:0}#menu-theme-desktop{display:none!important}#menu-theme-mobile{display:inline-block}.language{left:50%;margin-left:-71px;bottom:70px;top:auto;transition:all 1s ease-in;-webkit-transition:all .3s ease-in;opacity:0;visibility:hidden}.fp-viewing-page1 .language{display:block;opacity:1;visibility:visible}}@media screen and (max-width:700px){.fp-tableCell{font-size:.8em}#menu a{padding:0 .7em .7em}.my-arrow.left,.my-arrow.right{display:none}.fp-slidesNav.bottom{display:block}}@media screen and (max-width:630px){h1{font-size:6.5em}#menu{letter-spacing:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'}}@media screen and (max-width:550px){#section-1 h1{font-size:6em}h1{font-size:5em}.intro p{max-width:75%}#menu li a{padding:0 .7em .7em}#download,#menu-contact,.mobile-hide{display:none!important}.shell-body{margin:1.6em}#fp-nav.right{right:7px}}@media screen and (max-width:380px){h1{font-size:3.5em}.intro p{max-width:85%}#section-3 .shell{font-size:.8em}.shell-body{margin:1em}}@media only screen and (min-width:551px){.mobile-show{display:none}}</style><link rel="stylesheet" href="./fullPage.js _ 한 페이지 스크롤 구역 사이트 플러그인_files/non-critical.min.css">
+
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+    <style id="stylesheet-responsive" type="text/css">@CHARSET "ISO-8859-1";@media screen and (max-width:1135px){.fp-tableCell{font-size:.9em}.examples-wrapper{top:100px;-webkit-transform:none;transform:none}}@media screen and (max-width:1050px){.fp-tableCell{font-size:.85em}}@media screen and (max-width:1030px){#section-3 .intro{width:40%}.shell{width:calc(60% - 54px)}}@media screen and (max-width:900px){#section-3 .intro{display:block;text-align:center;width:100%}#section-3 .intro p{display:none}.shell{width:80%;margin:0}#menu{text-align:center;left:0;right:0}#menu-theme-desktop{display:none!important}#menu-theme-mobile{display:inline-block}.language{left:50%;margin-left:-71px;bottom:70px;top:auto;transition:all 1s ease-in;-webkit-transition:all .3s ease-in;opacity:0;visibility:hidden}.fp-viewing-page1 .language{display:block;opacity:1;visibility:visible}}@media screen and (max-height:500px){.section-1-usedBy{display:none}.fp-slidesNav.bottom{bottom:0}.trusted-by-big{background-position:50% 0;height:54px}}@media screen and (max-height:330px){.fp-section{height:350px!important}}@media screen and (max-width:700px),screen and (max-height:500px){.fp-tableCell{font-size:.8em}#menu a{padding:0 .7em .7em}.my-arrow.left,.my-arrow.right{display:none}.fp-slidesNav.bottom{display:block}}@media screen and (max-width:630px){h1{font-size:6.5em}#menu{letter-spacing:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'}[data-lang=ru] h1{font-size:4em}}@media screen and (max-width:550px){#section-1 h1{font-size:6em}h1{font-size:5em}[data-lang=ru] h1{font-size:3.6em}.intro p{max-width:75%}#menu li a{padding:0 .7em .7em}[data-lang=es] #menu li a,[data-lang=ru] #menu li a{padding:0 .4em .4em}[data-lang=es] #menu,[data-lang=ru] #menu{font-size:.98em}#download,#menu-contact,.mobile-hide{display:none!important}.shell-body{margin:1.6em}#fp-nav.right{right:7px}}@media screen and (max-width:380px){h1{font-size:3.5em}.intro p{max-width:85%}#section-3 .shell{font-size:.8em}.shell-body{margin:1em}}@media only screen and (min-width:551px){.mobile-show{display:none}}</style>
+<link type="text/css" rel="stylesheet" href="chrome-extension://eobejphpabbjeehffmbiecckpkggpbai/style.css"><script type="text/javascript" async="" src="./fullPage.js _ 한 페이지 스크롤 구역 사이트 플러그인_files/f.txt"></script><script type="text/javascript" async="" src="./fullPage.js _ 한 페이지 스크롤 구역 사이트 플러그인_files/analytics.js.다운로드"></script><script type="text/javascript" charset="utf-8" src="chrome-extension://eobejphpabbjeehffmbiecckpkggpbai/js/content-script/page_context.js"></script><script src="./fullPage.js _ 한 페이지 스크롤 구역 사이트 플러그인_files/f(1).txt"></script></head>
+<body data-lang="ko" class="fp-viewing-page1" naver_screen_capture_injected="true" style="overflow: hidden; height: 100%;">
+<div id="fullpage" class="fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, 0px, 0px);">
+    <div class="section fp-table fp-section active fp-completely" id="section-1" data-fp-styles="null" data-anchor="page1" style="height: 888px;">
+        <div class="fp-tableCell" style="height: 888px;">
+            <h1>fullPage</h1>
+            <h2>멋있는 전체화면 스크롤 웹사이트를 만들어 보세요</h2>
+
+            <ul>
+                <li>
+                    <a class="section-1-button" rel="noopener" href="https://alvarotrigo.com/fullPage/extensions/ko/">확장 프로그램</a>
+                </li>
+                <li id="download">
+                    <a class="section-1-button" href="https://github.com/alvarotrigo/fullpage.js/archive/master.zip" rel="noopener">다운로드</a>
+                </li>
+                <li>
+                    <a class="section-1-button" href="https://github.com/alvarotrigo/fullpage.js" rel="noopener">GitHub에서 보기</a>
+                </li>
+            </ul>
+
+            <div id="github-stars-button">
+                <iframe class="github-stars" tabindex="-1" src="./fullPage.js _ 한 페이지 스크롤 구역 사이트 플러그인_files/github-btn.html" frameborder="0" scrolling="0" width="152px" height="30px"></iframe>
+            </div>
+
+            <div class="section-1-usedBy bg-image"></div>
+        </div>
+    </div>
+
+    <div class="section fp-section" id="section-2" data-fp-styles="null" data-anchor="page2" style="height: 888px;">
+        <button class="my-arrow left">
+            <svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+                <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+                    45.63,75.8 0.375,38.087 45.63,0.375 ">
+            </polyline></svg>
+        </button>
+        <button class="my-arrow right">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+                <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+                    0.375,0.375 45.63,38.087 0.375,75.8 ">
+            </polyline></svg>
+        </button>
+        <div class="fp-slides"><div class="fp-slidesContainer" style="width: 300%; transition: all 1000ms ease 0s; transform: translate3d(0px, 0px, 0px);"><div class="slide active fp-slide fp-table" style="width: 33.3333%;"><div class="fp-tableCell" style="height: 888px;">
+            <div class="intro">
+                <h1>열려 있어요</h1>
+                <p>fullPage.js is actively maintained and community driven.</p>
+                <p>2013년부터 개발자가 맞닥뜨리는 문제를 해결하고 있습니다.</p>
+
+                <ul>
+                    <li class="github-data github-data-1" data-github="commits">
+                        <h4>1,820+</h4>
+                        <span>commits</span>
+                    </li>
+
+                    <li class="github-data github-data-2" data-github="closed_issues">
+                        <h4>3,280+</h4>
+                        <span>해결된 문제</span>
+                    </li>
+
+                    <li class="github-data github-data-3" data-github="contributors">
+                        <h4>122</h4>
+                        <span>기여자</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="sponsors">
+                <div>Sponsored by</div>
+                <a href="https://www.browserstack.com/" target="_blank" rel="nofollow noopener noreferrer"></a>
+                <a href="https://stackpath.com/" target="_blank" rel="nofollow noopener noreferrer"></a>
+                <a href="https://codepen.io/" target="_blank" rel="nofollow noopener noreferrer"></a>
+                <a href="https://hostpresto.com/?utm_source=alvaro" target="_blank" rel="nofollow noopener noreferrer"></a>
+                <a href="https://www.codefirst.co.uk/" target="_blank" rel="noopener"></a>
+            </div>
+        </div></div><div class="slide fp-slide fp-table" id="slide-2-2" style="width: 33.3333%;"><div class="fp-tableCell" style="height: 888px;">
+            <div class="intro">
+                <h1>단연 최고!</h1>
+                <p>
+                    가장 완성된 틀임을 자부심 있게 선언합니다.
+                    혁신의 선두를 달리는 기업에게 신뢰받고 있습니다.
+                </p>
+                <div class="bg-image trusted-by-big"></div>
+            </div>
+        </div></div><div class="slide fp-slide fp-table" style="width: 33.3333%;"><div class="fp-tableCell" style="height: 888px;">
+            <div class="intro">
+                <h1>훌륭한 호환성</h1>
+                <p>
+                    최신 브라우저뿐만 아니라 예전 버전에서도 작동합니다. 심지어 IE 9에서도 작동합니다!
+                    소수가 아닌 모두를 위한 멋진 웹사이트를 만들어 보세요!
+                </p>
+                <div class="bg-image compatible"></div>
+            </div>
+        </div></div></div></div>
+        
+        
+    <div class="fp-slidesNav fp-bottom"><ul><li><a href="https://alvarotrigo.com/fullPage/ko/#" class="active"><span class="fp-sr-only">fullPage</span><span></span></a></li><li><a href="https://alvarotrigo.com/fullPage/ko/#"><span class="fp-sr-only">Open</span><span></span></a></li><li><a href="https://alvarotrigo.com/fullPage/ko/#"><span class="fp-sr-only">Easy</span><span></span></a></li></ul></div></div>
+    <div class="section fp-table fp-section" id="section-3" data-fp-styles="null" data-anchor="page3" style="height: 888px;">
+        <div class="fp-tableCell" style="height: 888px;">
+            <div class="intro">
+                <h1>쉬워요!</h1>
+                <p>
+                    fullPage.js는 쉽게 사용하고 맞춤 설정할 수 있도록 고안되었습니다.
+                    수십 가지 예시, 훌륭한 문서화, 탁월한 개인 및 공동체 지원을 자랑합니다.
+                </p>
+            </div><!--
+            --><div class="shell">
+                <div class="shell-header">
+                    <span class="shell-header-actions shell-header-close"></span>
+                    <span class="shell-header-actions shell-header-minimize"></span>
+                    <span class="shell-header-actions shell-header-maximize"></span>
+                    <span class="shell-tabs">
+                        <a href="https://alvarotrigo.com/fullPage/ko/#html" class="active shell-tab">HTML</a>
+                        <a href="https://alvarotrigo.com/fullPage/ko/#js" class="shell-tab">JS</a>
+                    </span>
+                    <a href="https://codepen.io/alvarotrigo/pen/qqabrp" class="shell-demo">Codepen에서 보기</a>
+                </div>
+
+                <div class="shell-body">
+
+<div class="shell-tab-content active" data-tab="html">
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"fullpage"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section"</span><span class="nt">&gt;</span><span class="mobile-show"><br>        </span>Section 1<span class="mobile-show"><br>    </span><span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slide"</span><span class="nt">&gt;</span><span class="mobile-show"><br>            </span>Slide 2.1<span class="mobile-show"><br>         </span><span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slide"</span><span class="nt">&gt;</span><span class="mobile-show"><br>            </span>Slide 2.2<span class="mobile-show"><br>         </span><span class="nt">&lt;/div&gt;</span><span class="mobile-hide">
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slide"</span><span class="nt">&gt;</span><span class="mobile-show"><br>            </span>Slide 2.3<span class="mobile-show"><br>         </span><span class="nt">&lt;/div&gt;</span></span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section"</span><span class="nt">&gt;</span><span class="mobile-show"><br>        </span>Section 3<span class="mobile-show"><br>    </span><span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+<div class="shell-tab-content" data-tab="js">
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kc">new</span> <span class="na">fullpage</span><span class="p">(</span><span class="s1">'#fullpage'</span><span class="p">, {
+    <span class="na">navigation</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">responsiveWidth</span><span class="p">:</span> <span class="mi">700</span><span class="p">,</span>
+    <span class="na">anchors</span><span class="p">:</span> <span class="p">[</span><span class="s1">'home'</span><span class="p">,</span> <span class="s1">'about-us'</span><span class="p">,</span> <span class="s1">'contact'</span><span class="p">],</span>
+    <span class="na">parallax</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">onLeave</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">origin</span><span class="p">,</span> <span class="nx">destination</span><span class="p">,</span> <span class="nx">direction</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Leaving section"</span> <span class="o">+</span> <span class="nx">origin.index</span><span class="p">);</span>
+    <span class="p">},</span>
+<span class="p">});</span></span></code></pre></figure>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section fp-section fp-table" id="section-4" data-fp-styles="null" data-anchor="page4" style="height: 888px;"><div class="fp-tableCell" style="height: 888px;">
+        <div class="intro">
+            <div class="section-4-finger"></div>
+            <h1>만져보세요!</h1>
+            <p>모바일 기기와 태블릿에서 완전히 반응하도록 설계되었습니다.</p>
+            <p>누구나 아이처럼 신나게 만지고 싶으니까요.</p>
+        </div>
+    </div></div>
+</div>
+
+<ul id="menu">
+    <li class="menu-active menu-wordpress">
+        <a href="https://alvarotrigo.com/fullPage/ko/#" rel="noopener">
+            <span id="menu-theme-desktop">워드프레스</span>
+            <span id="menu-theme-mobile">WordPress</span>
+        </a>
+        <ul class="submenu plugins">
+            <li>
+                <a class="plugins-theme" href="https://alvarotrigo.com/fullPage/utils/wordpress.html">
+                    <i></i>
+                    Theme
+                </a>
+            </li>
+            <li>
+                <a class="plugins-plugin" href="https://alvarotrigo.com/fullPage/wordpress-plugin-gutenberg/">
+                    <i></i>
+                    Plugin Gutenberg
+                </a>
+            </li>
+            <li>
+                <a class="plugins-plugin" href="https://alvarotrigo.com/fullPage/wordpress-plugin-elementor/">
+                    <i></i>
+                    Plugin Elementor
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li><a href="https://alvarotrigo.com/fullPage/ko/#examples" class="show-examples">예시</a></li>
+    <li><a href="https://alvarotrigo.com/fullPage/pricing/" class="show-examples">가격</a></li>
+    <li>
+        <a rel="noopener" href="https://github.com/alvarotrigo/fullPage.js/tree/master/lang/korean#fullpagejs">설명서</a>
+    </li>
+    <li id="menu-contact"><a href="https://alvarotrigo.com/#contact-page">문의</a></li>
+    <li>
+        <a href="https://twitter.com/imac2" target="_blank" rel="noopener" class="twitter-share">
+            <i>
+                <svg viewBox="0 0 512 512"><path d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z"></path></svg>
+            </i>
+        </a>
+    </li>
+    <li id="menu-line" style="left: 19.36px; width: 93.28px;"></li>
+</ul>
+
+<div class="language active">
+    <div class="language-current">
+        <span class="flag flag-korean"></span>
+        <span class="language-name">한국어</span>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="language-triangle">
+      <polygon points="0,0 8,0 4, 4">
+    </polygon></svg>
+    <div class="submenu languages">
+        <ul><li><a href="https://alvarotrigo.com/fullPage/"><span class="flag flag-english"></span>English</a></li> <li><a href="https://alvarotrigo.com/fullPage/ru/"><span class="flag flag-russian"></span>Pусский</a></li> <li><a href="https://alvarotrigo.com/fullPage/es/"><span class="flag flag-spanish"></span>Español</a></li> <li><a href="https://alvarotrigo.com/fullPage/zh/"><span class="flag flag-chinese"></span>中文</a></li></ul>
+    </div>
+</div>
+
+<div class="examples">
+    <a href="https://alvarotrigo.com/fullPage/ko/#" class="info-close"></a>
+    <div class="examples-wrapper">
+        <div class="examples-column">
+            <h3>이동</h3>
+            <ul>
+            <li><a href="https://alvarotrigo.com/fullPage/examples/scrollBar.html">스크롤 막대 활성화됨</a></li>
+            <li><a href="https://alvarotrigo.com/fullPage/examples/normalScroll.html">정상 스크롤</a></li>
+            <li><a href="https://alvarotrigo.com/fullPage/examples/continuous.html">연속 수직</a></li>
+            <li><a href="https://alvarotrigo.com/fullPage/examples/noAnchor.html">앵커 링크가 없음 (동일 URL)</a></li>
+            <li><a href="https://alvarotrigo.com/fullPage/examples/navigationV.html">수직 이동 점</a></li>
+            <li><a href="https://alvarotrigo.com/fullPage/examples/navigationH.html">수평 이동 점</a></li>
+            </ul>
+        </div>
+        <div class="examples-column">
+            <h3>확장 프로그램</h3>
+            <ul>
+                <li><a href="https://alvarotrigo.com/fullPage/extensions/cards.html">Cards 3D</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/extensions/parallax.html">Parallax</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/extensions/continuous-horizontal.html">연속 수평</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/extensions/interlocked-slides.html">맞물려 이동하는 슬라이드</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/extensions/reset-sliders.html">슬라이더 초기화</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/extensions/responsive-slides.html">반응형 슬라이드</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/extensions/scroll-horizontally.html">수평으로 스크롤하기</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/extensions/fading-effect.html">페이딩 효과</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/extensions/offset-sections.html">엿보기 구역</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/extensions/drag-and-move.html">끌어서 슬라이드 움직이기</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/extensions/scrolloverflow-reset.html">ScrollOverflow Reset</a></li>
+            </ul>
+        </div>
+        <div class="examples-column">
+            <h3>디자인</h3>
+            <ul>
+                <li><a href="https://alvarotrigo.com/fullPage/examples/responsive.html">반응형</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/examples/backgrounds.html">전체 배경</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/examples/videoBackground.html">전체 배경 비디오</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/examples/autoHeight.html">자동 높이 구역</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/examples/gradientBackgrounds.html">그라데이션 배경</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/examples/scrolling.html">구역 및 슬라이드 내부에서 스크롤</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/examples/fixedHeaders.html">고정된 머리말과 꼬리말 추가</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/examples/oneSection.html">단일 구역</a></li>
+                <li>&nbsp;</li>
+            </ul>
+            <h3>Wordpress</h3>
+            <ul>
+                <li><a href="https://alvarotrigo.com/fullPage/wordpress-plugin-gutenberg/">Wordpress plugin for Gutenberg</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/utils/wordpress.html">Wordpress Theme</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/wordpress-plugin-divi/">Wordpress plugin for Divi</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/wordpress-plugin-elementor/">Wordpress plugin for Elementor</a></li>
+            </ul>
+        </div>
+        <div class="examples-column">
+            <h3>기타</h3>
+            <ul>
+                <li><a href="https://alvarotrigo.com/fullPage/examples/apple.html">스크롤 애니메이션</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/examples/callbacks.html">콜백</a></li>
+                <li><a href="https://alvarotrigo.com/fullPage/examples/methods.html">기능과 방법</a></li>
+                <li>&nbsp;</li>
+            </ul>
+            <h3>Wrappers</h3>
+            <ul>
+                <li><a href="https://alvarotrigo.com/vue-fullpage/">Vue.js</a></li>
+                <li><a href="https://alvarotrigo.com/react-fullpage/">React.js</a></li>
+                <li><a href="https://alvarotrigo.com/angular-fullpage/">Angular</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="./fullPage.js _ 한 페이지 스크롤 구역 사이트 플러그인_files/fullpage.dragAndMove2.limited.min.js.다운로드"></script>
+
+<script type="text/javascript" src="./fullPage.js _ 한 페이지 스크롤 구역 사이트 플러그인_files/fullpage.extensions.min.js.다운로드"></script>
+<script type="text/javascript">
+        new fullpage('#fullpage', {
+            anchors: ['page1', 'page2', 'page3', 'page4'],
+            navigationTooltips: ['fullPage', 'Open', 'Easy', 'Touch'],
+            css3: true,
+            scrollingSpeed: 1000,
+            navigation: true,
+            slidesNavigation: true,
+            responsiveHeight: 330,
+            dragAndMove: true,
+            dragAndMoveKey: 'YWx2YXJvdHJpZ28uY29tX0EyMlpISmhaMEZ1WkUxdmRtVT0wWUc=',
+            controlArrows: false
+        });
+</script><div id="fp-nav" class="fp-right" style="margin-top: -43.5px;"><ul><li><a href="https://alvarotrigo.com/fullPage/ko/#page1" class="active"><span class="fp-sr-only">fullPage</span><span></span></a><div class="fp-tooltip fp-right">fullPage</div></li><li><a href="https://alvarotrigo.com/fullPage/ko/#page2"><span class="fp-sr-only">Open</span><span></span></a><div class="fp-tooltip fp-right">Open</div></li><li><a href="https://alvarotrigo.com/fullPage/ko/#page3"><span class="fp-sr-only">Easy</span><span></span></a><div class="fp-tooltip fp-right">Easy</div></li><li><a href="https://alvarotrigo.com/fullPage/ko/#page4"><span class="fp-sr-only">Touch</span><span></span></a><div class="fp-tooltip fp-right">Touch</div></li></ul></div>
+<script type="text/javascript">!function(i,a){"use strict";var e,t,n,s=fp_utils.$,o=fp_utils.after,l=fp_utils.hasClass,u=fp_utils.addClass,r=fp_utils.toggleClass,c=fp_utils.removeClass,f=fp_utils.siblings,d=fp_utils.preventDefault,p=".language",h=s("#menu-line")[0],g=s(".menu-active").offsetWidth,v=0,m=40,L="active";function E(){m=2*parseFloat(getComputedStyle(fp_utils.$(".menu-active a")[0]).paddingLeft)}function y(){var e,t,n,i,a;e="GET",t="https://alvarotrigo.com/fullPage/routes/github-api.php",n=null,i=function(e){var n=JSON.parse(e);Object.keys(n).forEach(function(e){var t=s('[data-github="'+e+'"] h4')[0];t&&(t.innerHTML=n[e])})},(a=new XMLHttpRequest).open(e,t,!0),a.setRequestHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8"),a.send(n),a.onreadystatechange=function(){4===a.readyState&&(200===a.status?i(a.responseText):console.log("Error: "+a.status))}}function w(e){switch(e.keyCode){case 27:l(s(".examples")[0],L)&&T()}}function b(){l(this,"left")?fullpage_api.moveSlideLeft():fullpage_api.moveSlideRight()}function _(){var e,t,n;e="https://alvarotrigo.com/fullPage/dist/non-critical.min.css?v=2",t=a.document.createElement("link"),a.document.styleSheets,t.rel="stylesheet",t.href=e,o(s("#stylesheet-critical")[0],t),s(".github-stars")[0].setAttribute("src","https://ghbtns.com/github-btn.html?user=alvarotrigo&repo=fullpage.js&type=star&count=true&size=large"),(n=decodeURIComponent(a.location.hash.substr(1))).length&&s("."+n,i).length&&fp_utils.trigger(s(".show-examples")[0],"click"),y()}function k(){clearTimeout(e),e=setTimeout(x,350)}function x(){if(g=s(".menu-active")[0].offsetWidth,a.innerWidth<=900){E();var e=s("#menu a")[0];R.call(e),v=e.offsetLeft}else 900<a.innerWidth&&(E(),R.call(s("#menu a")[0]),v=0)}function T(){clearTimeout(t),t=setTimeout(function(){S(".examples"),fullpage_api.setAllowScrolling(!0)},300)}function C(e){S(".examples"),fullpage_api.setAllowScrolling(!1)}function S(e){r(s(e)[0],L)}function A(e){void 0!==e&&(d(e),(e||a.event).stopPropagation()),S(p)}function W(e){c(s(p)[0],L)}function R(){var e=this.parentNode;D(e.offsetLeft,e.offsetWidth)}function j(){D(v,g)}function D(e,t){h.style.left=e+m/2+"px",h.style.width=t-m+"px"}function H(e){d(e);var t=this.getAttribute("href").substr(1);u(this,L),c(f(this),L);var n=s('[data-tab="'+t+'"]')[0];u(n,L),c(f(n),L)}E(),h.style.width=g-m+"px",h.style.left="20px","en"!==(!(n=navigator.language||navigator.userLanguage)||n.indexOf("-")<0?n:n.split("-")[0])&&A(),k(),s(".menu-active a")[0].addEventListener("click",function(e){e.preventDefault()}),s("#menu li a").forEach(function(e){e.addEventListener("mouseover",R),e.addEventListener("mouseout",j)}),a.addEventListener("resize",k),a.addEventListener("load",_),s(".shell-tab").forEach(function(e){e.addEventListener("click",H)}),s(".language-current")[0].addEventListener("click",A),s("html")[0].addEventListener("click",W),s(".info-close")[0].addEventListener("touchstart",T),s(".info-close")[0].addEventListener("click",T),s(".show-examples")[0].addEventListener("click",C),i.addEventListener("keydown",w),s(".my-arrow").forEach(function(e){e.addEventListener("click",b)}),function(){function e(){dataLayer.push(arguments)}a.dataLayer=a.dataLayer||[],e("js",new Date),e("config","UA-94005074-1"),e("config","AW-1012934304")}()}(document,window);</script>
+
+<!-- Google Analytics (do not copy!) -->
+<script async="" src="./fullPage.js _ 한 페이지 스크롤 구역 사이트 플러그인_files/js"></script>
+<!-- End Google Analytics -->
+
+
+<noscript><img height="1" width="1" style="display:none" alt="fb" src="https://www.facebook.com/tr?id=1786065945027357&ev=PageView&noscript=1"></noscript>
+<input type="hidden" id="_4" value="7e68giOjsw">
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+
+</body><audio src="" id="naver_dic_audio_controller" controls="controls" style="display: none;"></audio></html>

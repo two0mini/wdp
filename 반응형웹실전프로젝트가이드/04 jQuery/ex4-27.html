@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>스크롤 관련 메서드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #outer {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid #333;
+            overflow: auto;
+        }
+        .inner {
+            width: 1000px;
+            height: 1000px;
+            background: #ff6600;
+        }
+        #info {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            width: 300px;
+            margin-left: -550px;
+            text-align: right;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var top = $("#outer").scrollTop();
+            var left = $("#outer").scrollLeft();
+            $("#info span").text("scrollTop : " + top + " / " + "scrollLeft : " + left);
+            $("#outer").scroll(function() {
+                top = $("#outer").scrollTop();
+                left = $("#outer").scrollLeft();
+                $("#info span").text("scrollTop : " + top + " / " + "scrollLeft : " + left);
+            });
+            $("button").click(function () {
+                $("#outer").scrollTop(250).scrollLeft(250);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="outer">
+        <div class="inner"></div>
+    </div>    
+    <div id="info">
+        <span></span>
+        <button>클릭</button>
+    </div>
+</body>
+</html>

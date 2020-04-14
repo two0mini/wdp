@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>animate() 메서드</title>
+    <style>
+        *{
+            margin: 5px;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: #ff6600;
+            position: relative;
+        }
+        .m1{
+            overflow: hidden;
+        }
+        .m1 span{
+            position: relative;
+            top: -50px;
+        }
+    </style>    
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button:eq(0)").click(function() {
+               $(".m0").animate({left: 500}, "fast", "swing").animate({left: 0}, "slow", "swing"); 
+            });
+            $("button:eq(1)").click(function() {
+                 $(".m1 span").css("top", -50);
+               $(".m1").animate({left: 500}, "fast", "swing").animate({left: 0}, "slow", "swing", function() {
+                   $(this).find("span").animate({top: 30}, "fast", "swing");
+               }); 
+            });         
+            $("button:eq(2)").click(function() {
+               $(".m2").animate({left: "+=200"}, "fast", "swing");
+            });
+            $("button:eq(3)").click(function() {
+               $(".m3").animate({width: "toggle"}, "fast", "swing");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>animate1</button>
+    <div class="m0"></div>
+    <button>animate2</button>
+    <div class="m1"><span>애니메이션</span></div>
+    <button>animate3</button>
+    <div class="m2"></div>
+    <button>animate4</button>
+    <div class="m3"></div>
+</body>
+</html>

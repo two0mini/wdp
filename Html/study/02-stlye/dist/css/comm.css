@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/*  
+    1. reset 설정
+    2. float를 해제하기 위해 clear 클래스 선언
+    3. 웹폰트 설정
+    4. header 안에 로고와 주메뉴를 가로로 배치하기 위해 h1에 float 속성 부여
+    5. header 안에 로고와 주메뉴를 가로로 배치하기 위해 .gnb에 float 속성 부여
+    6. header 영역 float 해제
+    7. .gnb > li 가로 배치하기 위해 float 속성 부여
+    8. .gnb 영역 float 해제
+    9. #container 안에 서브메뉴와 콘텐츠를 가로로 배치하기 위해 .lnb에 float 속성 부여
+    10. #container 안에 서브메뉴와 콘텐츠를 가로로 배치하기 위해 .content_area에 float 속성 부여
+    11. #container 영역 float 해제
+    */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', serif;
+}
+
+.clear_g:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    content: ''
+}
+
+#wrap {
+    width: 800px; 
+    margin: auto;
+}
+
+header {
+    background: blue;
+}
+
+header h1 {
+    float: left;
+    font-size: 30px;
+}
+
+header h1 a {
+    height: 50px;    
+    line-height: 50px;
+    padding: 0 20px;
+    font-size: 20px;
+    color: #fff;
+    
+}
+
+header nav {
+    float: right;
+    height: 20px;
+}
+
+header nav li {
+    float:left;
+}
+
+header nav a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 20px;    
+}
+
+#container {
+    overflow: hidden;
+    background: lightgreen;
+    
+}
+
+.lnb {
+    float: left;
+    width: 30%;
+    background: lightblue;
+}
+
+.content_area {
+    float: right;
+    width: 65%;
+    background: tomato;
+}
+
+footer {
+    background: lightgray;
+    text-align: center;
+}
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>표</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td,th{
+            border: 1px solid #000;
+        }
+        .c1{
+            background: #ff0; /*노락색*/
+        }
+        .c2{
+            background: #0ff; /*하늘색*/
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col class="c1">
+            <col class="c2">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>교과목</th>
+                <th>점수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>HTML</th>
+                <td>93</td>
+            </tr>
+            <tr>
+                <th>CSS</th>
+                <td>92</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>평균</th>
+                <td>92.5</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

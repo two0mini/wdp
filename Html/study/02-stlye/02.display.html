@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>블록과 인라인</title> 
+<style type="text/css">
+    * {
+        list-style: none;
+    }
+    .gnb li {
+        display: inline-block;
+        width: 100px;
+        height: 30px;
+        background: tomato;
+        text-align: center;
+        margin: 10px;
+    }
+    .gnb a {
+        display: block;
+        width: 100px;
+        height: 30px;
+        background: red;        
+    }
+    .gnb li:last-child {
+        display: none;
+    }
+    .gnb li:hover {
+        display: none;
+    }
+    
+</style>
+</head> 
+<body>
+	<ul class="gnb">
+		<li><a href="#">Company</a></li>
+		<li><a href="#">Product</a></li>
+		<li><a href="#">Service</a></li>
+		<li><a href="#">Community</a></li>
+	</ul>
+</body> 
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>POSITION</title>
+    <style type="text/css">
+        /* 기본 reset */
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url(./images/bg_grid.gif) 0 0 repeat;
+        }
+
+        .box {
+            position: relative;
+            width: 70%;
+            height: 1500px;
+            background: rgba(0, 0, 0, .5);
+            margin: 50px;
+        }
+
+        .box p {
+            width: 150px;
+            height: 100px;
+        }
+
+        .box .red {
+            position: absolute;
+            top: 200px;
+            left: 100px;
+            background: red;
+        }
+
+        .box .green {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            background: green;
+            margin-top: -50px;
+        }
+
+        .box .blue {
+            /* 하단 x축 가운데 정렬 */
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -75px;    
+            background: blue;
+        }
+        
+        .box .gnb {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background: rgba(0,0,0,.7);            
+        }
+        .box .gnb li {
+            /* float: left; */
+            color: #fff;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p class="red">박스의 크기와 위치를 잘 살펴보아야 합니다.</p>
+        <p class="green">박스의 포지션 속성을 바꿔가며 테스트해 보아야 합니다.</p>
+        <p class="blue">포지션을 이해하기 위해서는 시험해보고 관찰해 보는 것이 절대적으로 필요합니다.</p>
+        <ul class="gnb">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+            <li>메뉴5</li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상대 위치로 선택하는 방법</title>
+    <script>
+        window.onload = function() {
+            var gnb = document.getElementById('gnb');
+            console.log(gnb.parentNode);
+            console.log(gnb.children[0]);
+            console.log(gnb.children[0].children[0]);
+            console.log(gnb.children[0].children[0].nextElementSibling);
+            console.log(gnb.children[0].children[2].previousElementSibling);
+            console.log(gnb.children[0].firstChild);
+            console.log(gnb.children[0].lastChild);
+            console.log(gnb.children[0].tagName);
+            console.log(gnb.children[0].children[0].firstChild.nodeValue);
+            console.log(gnb.children[0].children[0].nodeType);
+            console.log(gnb.id);
+            console.log(gnb.children[0].children[0].className);
+        };
+    </script>
+</head>
+<body>
+    <div>
+        <nav id="gnb">
+            <ul>
+                <li class="first">내용1</li>
+                <li>내용2</li>
+                <li>내용3</li>
+            </ul>
+        </nav>
+    </div>    
+</body>
+</html>

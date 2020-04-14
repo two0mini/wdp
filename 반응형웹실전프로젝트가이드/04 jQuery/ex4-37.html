@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 강제 실행</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            overflow: hidden;
+        }
+        #con1{
+            height: 100px;
+            background: #718c00;  
+            transform: translateX(-98%);
+            transition: all 0.5s ease
+        }
+        #con2{
+            height: 100px;
+            background: #cc3300;  
+            transform: translateX(98%);
+            transition: all 0.5s ease
+        }
+        #con1.on, #con2.on{            
+            transform: translateX(0);
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button:eq(0)").on("click", function() {                
+               $("#con1").toggleClass("on"); 
+            }).trigger("click");
+            $("button:eq(1)").on("click", function() {
+               $("#con2").toggleClass("on"); 
+            }).trigger("click");
+            $("button:eq(2)").on("click", function() {
+               $("button:eq(0)").trigger("click");
+               $("button:eq(1)").trigger("click");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="con1"></div>
+    <div id="con2"></div>
+    <button>클릭1</button>
+    <button>클릭2</button>
+    <button>all</button>
+</body>
+</html>

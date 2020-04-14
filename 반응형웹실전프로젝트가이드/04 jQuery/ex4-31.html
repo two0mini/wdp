@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>mouseover(), mouseout()와 mouseenter(), mouseleave()의 차이점</title>
+    <style>
+        .bg {
+            padding: 40px;
+            margin-bottom: 40px;
+            background: #ccc;
+        }
+        .inner {
+            padding: 20px;
+            background: #999;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".wrap1").mouseover(function() {
+               $(".display").append("<strong>마우스오버</strong>"); 
+            });
+            $(".wrap2").mouseenter(function() {
+               $(".display").append("<em>마우스들어감</em>"); 
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap1 bg">
+        <div class="inner">mouseover</div>
+    </div>
+    <div class="wrap2 bg">
+        <div class="inner"> mouseenter</div>
+    </div>
+    <div class="display"></div>
+</body>
+</html>

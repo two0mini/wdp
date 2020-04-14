@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>둥근 테두리</title> 
+<style type="text/css">
+           
+    .border_radius {
+        display: inline-block;
+        width: 300px; height: 100px;
+        background: gray;
+    }
+    .border_radius1 .radius1 {
+        border-radius: 10px;
+    }
+    .border_radius1 .radius2 {
+        width: 100px; height: 100px;
+        border-radius: 50%
+    }
+    .border_radius1 .radius3 {
+        border-radius: 50%
+    }
+    .border_radius1 .radius4 {
+        border-radius: 40px 15px 40px 15px;
+    }
+    
+</style>
+</head> 
+
+<body>
+   
+    <div class="border_radius1">
+        <span class="radius radius1">radius1</span>
+        <span class="radius radius2">radius2</span>
+        <span class="radius radius3">radius3</span>
+        <span class="radius radius4">radius4</span>
+    </div>
+    
+    <hr>
+    <style>
+        .border_radius2 .radius {
+            display: inline-block;
+            padding: 40px 0; text-align: center;
+            background: tomato;
+        }
+        .border_radius2 .radius1 {
+            width: 230px;
+            border-radius: 15px / 70px;
+        }
+        border_radius2 .radius2 {
+             width: 230px;
+            border-radius: 15px 70px 15px 70px 15px 70px 15px 70px
+        }
+    </style>
+    <div class="border_radius2">
+        <span class="radius radius1">border-radius: 15px / 70px;</span>
+        <span class="radius radius2">border-radius: 15px 70px 15px 70px / 70px 15px 70px 15px;</span>
+    </div>
+    
+    <style>
+        
+    </style>
+    <div class="outline">
+        outline
+    </div>
+</body> 
+</html>

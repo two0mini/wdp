@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>html() 메서드</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            console.log($("#m1").html());       
+            $("#m1").html("<em>html</em>");
+            $("#m2 > div").html(function() {
+                return "<strong>" + $(this).text() + "</strong>";
+            });
+        });
+    </script>
+</head>
+<body>   
+    <div id="m1"><strong>jQuery</strong></div>
+    <div id="m2">
+        <div><em>html</em></div>
+        <div><em>css</em></div>
+        <div><em>javascript</em></div>
+    </div>
+</body>
+</html>

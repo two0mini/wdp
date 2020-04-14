@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>flexbox</title>
+    <style>
+        .flexbox_g {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            background: Dodgerblue;
+            margin-bottom: 10px;
+        }
+
+        .flexbox_g>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <style>
+        .flexbox1>div:first-child {
+            order: 4
+        }
+
+        .flexbox1>div:nth-child(2) {
+            order: 1
+        }
+
+        .flexbox1>div:nth-child(3) {
+            order: 2
+        }
+
+        .flexbox1>div:last-child {
+            order: 3
+        }
+
+    </style>
+    <div class="flexbox_g flexbox1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <style>
+
+    </style>
+    <div class="flexbox_g flexbox2">
+        <div style="flex-grow: 0">1</div>
+        <div style="flex-grow: 1">2</div>
+        <div style="flex-grow: 1">3</div>
+    </div>
+
+    <style>
+    </style>
+    <div class="flexbox_g flexbox3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div style="width: 100px;flex-shrink: 0">4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+
+    <style>
+    </style>
+    <div class="flexbox_g flexbox4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <style>
+
+    </style>
+    <div class="flexbox_g flexbox5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <style>
+    </style>
+    <div class="flexbox_g flexbox4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>

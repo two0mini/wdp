@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>grid Layout</title> 
+<style type="text/css">
+    .wrap {
+        display: grid;
+        grid-template-columns: 33% 34% 33%;
+        grid-template-rows: 100px 100px 100px;
+    }
+    .wrap > div { margin: 2px; padding: 10px; font-size: 20px; }
+    .grid1 { 
+        grid-column-start: 1; grid-column-end: 3; 
+        background: #579; 
+    }
+    .grid2 {
+        grid-column-start: 3; grid-column-end: 4;
+        background: #68a; 
+    }
+    .grid3 {
+        grid-column-start: 1; grid-column-end: 2;
+        grid-row-start: 2; grid-row-end: 4;
+        background: #79b 
+    }
+    .grid4 { 
+        grid-column-start: 2; grid-column-end: 4;
+        background: #8ac; 
+    }
+    .grid5 { 
+        grid-column-start: 2; grid-column-end: 3;
+        background: #9bd; 
+    }
+    .grid6 { 
+        grid-column-start: 3; grid-column-end: 4;
+        background: #ace; 
+    }
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="grid1">GRID1</div>
+        <div class="grid2">GRID2</div>
+        <div class="grid3">GRID3</div>
+        <div class="grid4">GRID4</div>
+        <div class="grid5">GRID5</div>
+        <div class="grid6">GRID6</div>
+    </div>
+</body>

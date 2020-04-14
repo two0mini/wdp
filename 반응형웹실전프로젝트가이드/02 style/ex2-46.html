@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>IMAGE SPRITE</title> 
+<style type="text/css">
+    li { list-style-type: none; margin: 5px;}
+    .lnb li a {
+        display: block;
+        padding-left: 30px;
+        text-decoration: none;
+        font: 25px Times; 
+        color:#000;
+        background:url(img/bg_sprite.png) no-repeat;
+        background-size: 26px 176px;
+    }
+    .lnb li:nth-child(1) a { background-position: 0 0; }
+    .lnb li:nth-child(2) a { background-position: 0 -50px; }
+    .lnb li:nth-child(3) a { background-position: 0 -100px; }
+    .lnb li:nth-child(4) a { background-position: 0 -150px; }
+</style>
+</head> 
+<body>
+    <ul class="lnb">
+        <li><a href="#">Theater</a></li>
+        <li><a href="#">Secret Garden</a></li>
+        <li><a href="#">Concert Hall</a></li>
+        <li><a href="#">Animal Farm</a></li>
+    </ul>
+</body> 
+</html>

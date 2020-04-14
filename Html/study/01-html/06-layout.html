@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>layout</title>
+    <style>
+        #Wrap {}
+
+        .wrap {
+            padding: 10px;
+            border: 5px solid gray;
+        }
+
+        .header {
+            display: flex;
+            background: lightgreen;
+        }
+        nav > ul {
+            display: flex;
+        }
+
+        .container {
+            display: flex;
+            margin: 10px 0;
+            background: lightpink;
+        }
+
+        .contents {
+            width: 70%;
+            background: lightgreen;
+        }
+        .contests section {
+            boeder: 1px solid pink;
+        }
+        .contests article {
+            display: block;
+            boeder: 1px solid red;
+        }
+
+        aside {
+            width: 30%;
+            background: lightblue;
+        }
+
+        footer {
+            display: flex;
+            background: lightpink;
+        }
+
+        h1 {
+            width: 30%;
+            background: #ffe0e5;
+        }
+        
+        .col-right {
+            width: 70%;
+        }
+
+        address {
+            background: #ffe0e5;
+        }
+
+        .copyright {
+            background: #ffe0e5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="Wrap" class="wrap">
+
+        <header class="header">
+            <h1><a href="#">로고</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">메뉴1 </a></li>
+                    <li><a href="#">메뉴2 </a></li>
+                    <li><a href="#">메뉴3 </a></li>
+                    <li><a href="#">메뉴4 </a></li>
+                    <li><a href="#">메뉴5 </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="contents">
+                <section>
+                    <header>
+                        <h2>컨텐츠 그룹1</h2>
+                    </header>
+                    <div class="cont">
+                        컨텐츠 내용
+                    </div>
+                    <footer></footer>
+                </section>
+
+                <section>
+                    <header>
+                        <h2>컨텐츠 그룹2</h2>
+                    </header>
+                    <div class="cont">
+                        컨텐츠 내용
+                    </div>
+                    <footer></footer>
+                </section>
+
+                <article>
+                    <h2>주요 기사</h2>
+                </article>
+
+            </div>
+
+            <aside>어사이드</aside>
+        </div>
+
+        <footer>
+            <h1><a href="#">로고</a></h1>
+            <div class="col-right">
+                <address>
+                경기도 부천시 상동로 메가플러스 6층<br>
+                <a href="tel:032-3333-4567">032-3333-4567</a> <br>
+                <a href="mailto:ddd@naver.com">ddd@naver.com</a>
+                </address>
+                <p class="copylight">
+                Copylight &#169; Naver.cop
+                </p>
+                
+            </div>           
+        </footer>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>if 문</title>
+    <script>
+        var age = prompt('나이입력',''); // ''는 작은따옴표 두 개 입니다.
+        var admissionFee = '';
+        if (age < 13 || age >= 65) {
+            admissionFee = '2,000원';
+        } else if (age >= 13 && age < 20) {
+            admissionFee = '4,000원';
+        } else {
+            admissionFee = '6,000원';
+        }
+        document.write(admissionFee); 
+    </script>
+</head>
+<body>
+</body>
+</html>

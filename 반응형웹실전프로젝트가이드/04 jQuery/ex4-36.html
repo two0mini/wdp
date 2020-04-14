@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 연결 메서드</title>
+    <style>
+        *{
+            margin: 5px;
+        }
+        .on{            
+            background: #ff6600;
+            color: #fff;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#m1 button").on("click", function() {
+                alert("이벤트 연결1");
+            });            
+            $("#m2").on("click", "button", function() {
+                alert("이벤트 연결2");
+            });            
+            $("#m3 button").on({
+                mouseenter : function() {
+                    $(this).toggleClass("on");
+                }, mouseleave : function() {
+                    $(this).toggleClass("on");
+                }
+            });            
+            function showEvnet(){
+                alert("이벤트 연결3");
+            }
+            $("#m4 button").on("click", showEvnet);
+            $("#m5 button").on("click", function() {
+                alert("이벤트 제거");
+            }).off();  
+             $("#m6 button").one("click", function() {
+                alert("이벤트 한번만 연결");
+            });
+             $("#m7").on("click", function() {
+                $("p", this).css("background", "#ff0000");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="m1">
+        <button>클릭1</button>
+    </div>
+    <div id="m2">
+        <button>클릭2_1</button>
+        <button>클릭2_2</button>
+    </div>
+    <div id="m3">
+        <button>클릭3</button>
+    </div>
+    <div id="m4">
+        <button>클릭4</button>
+    </div>
+    <div id="m5">
+        <button>클릭5</button>        
+    </div>
+    <div id="m6">
+        <button>클릭6</button>        
+    </div>
+    <div id="m7">
+        <p>클릭7</p>        
+    </div>
+</body>
+</html>

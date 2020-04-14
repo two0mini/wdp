@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>stop()</title>
+    <style>
+        * {
+            margin: 5px;
+        }        
+        div > div {
+            width: 100px;
+            height: 100px;
+            background: #ff6600;           
+        }        
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button:eq(0)").click(function() {
+                $(".m1").slideToggle();
+            });
+            $("button:eq(1)").click(function() {
+                $(".m2").stop().slideToggle();
+            });
+            $("button:eq(2)").click(function() {
+                $(".m3").animate({height : "toggle"}, 1000, "swing");
+            });
+             $("button:eq(3)").click(function() {
+                $(".m4").stop().animate({height : "toggle"}, 1000, "swing");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <button>slideToggle()</button>
+        <div class="m1"></div>
+    </div>
+    <div>
+        <button>slideToggle()_stop()</button>
+        <div class="m2"></div>
+    </div>
+    <div>
+        <button>animate()</button>
+        <div class="m3"></div>
+    </div>
+    <div>
+        <button>animate_stop()</button>
+        <div class="m4"></div>
+    </div>
+</body>
+</html>

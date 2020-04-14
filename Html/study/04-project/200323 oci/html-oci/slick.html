@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- 반응형 페이지 뷰포트 설정 -->
+  <meta name="apple-mobile-web-app-title" content="OCI" />
+  <title>OCI</title>
+  <link rel="stylesheet" type="text/css" href="./dist/css/module/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./dist/css/module/slick-theme.css"/>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="./dist/js/module/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.slide-main').slick({
+            arrow:true,
+            autoplay: true,
+  autoplaySpeed: 2000,            
+        });
+    });
+</script>
+
+</head>
+<body>
+    <div class="slide-main">
+        <div><img src="./images/slide1.jpg" alt=""></div>
+        <div><img src="./images/slide2.jpg" alt=""></div>
+        <div><img src="./images/slide3.jpg" alt=""></div>
+      </div>
+</body>
+
+</html>

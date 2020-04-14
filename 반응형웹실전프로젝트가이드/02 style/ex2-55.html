@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>둥근 테두리</title> 
+<style type="text/css">
+	.radius { 
+        display: inline-block;
+        padding: 40px 0; text-align: center; 
+        background-color: #07d;
+    }
+    .radius1 {
+        width: 230px; margin: 10px;
+        border-radius: 15px / 70px;
+    }
+    .radius2 {
+        width: 490px; 
+       	border-radius: 15px 70px 15px 70px / 70px 15px 70px 15px;
+    }
+</style>
+</head> 
+<body>
+   <span class="radius radius1">border-radius: 15px / 70px;</span>
+   <span class="radius radius2">border-radius: 15px 70px 15px 70px / 70px 15px 70px 15px;</span>
+</body> 
+</html>

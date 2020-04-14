@@ -1,0 +1,359 @@
+@import 'variables.scss';
+@import 'mixin.scss';
+
+//login
+#login {
+  float: left;
+  width: 23%;height: 340px;margin-right: 2%;
+  // margin: -150px 0 0 -194px;
+  // padding: 28px 28px 0 28px;
+  @include border_blue;
+  background: #fff;
+  font-size: 12px;
+  // font-family: Tahoma, Geneva, sans-serif;
+  color: #767676;
+  // line-height: normal;
+  // white-space: normal;
+  .g_login {
+    position: relative;
+    padding: 20px 15px 0;
+  }
+  .btn_ {
+    display: block;
+    overflow: visible;
+    position: relative;
+    margin: 0 0 5px 0;
+    background-position: left top;
+    &.btn_login {
+      input {background: #1086ce;}
+    }
+    &.btn_join {
+      input {background: #555;}
+    }
+    input {
+      display: block;
+      overflow: visible;
+      position: relative;
+      width: 100%;height: 40px;margin: 0;padding: 0;
+      border: 0;
+      color: #fff;line-height: 40px;vertical-align: middle;
+      cursor: pointer;
+      *vertical-align: top;
+    }
+  }
+  .txt_info {
+    display: block;
+    height: 170px;
+    color: #666;font-size: 0.867rem;
+  }
+
+  .item {
+    position: relative;
+  }
+
+  .i_label {
+    display: block;
+    position: absolute;
+    top: 9px;left: 10px;
+    font-size: 0.967em;color: #999;
+  }
+
+  // .i_text {
+  //   display: block;
+  //   position: relative;
+  //   width: 100%;
+  //   margin: 0 0 10px 0;
+  //   padding: 8px 10px 6px;
+  //   border: 1px solid $border_color;
+  //   background: transparent;
+  //   font-size: 0.967em;
+  //   height: 35px;
+  //   color: #767676;
+  //   &:hover, &:active, &:focus {
+  //     border: 1px solid $cerulean;
+  //   }
+  // }
+
+// 191116 S
+  .i_text {
+    display: block;
+    width: 100%;height: 35px;
+    margin: 0 0 10px 0;
+    padding: 6px 10px 6px;
+    border: 0;
+    font-weight: bold;font-size: 1em;line-height: 1.1;
+    vertical-align: top;
+    color: #767676;
+    background-color: transparent;
+    border: 1px solid $border_color;
+    outline: 0;
+    box-sizing: border-box;
+  }
+  // 191116 E
+
+  .help {
+    float: none;
+    display: block;
+    position: relative;
+    border: 0;
+    padding: 15px 0 0;
+    background: #fafafa;
+    text-align: center;
+    *zoom: 1;
+
+    li {
+      display: inline-block;
+      float: none;
+      margin: 0;
+      padding: 0 6px;
+      border-left: 1px solid #c3c3c3 !important;
+      line-height: 1;
+
+      &:first-child {
+        border: 0 !important;
+      }
+    }
+
+    a {
+      display: block;
+      float: none;
+      padding: 0;
+      background: none;
+      color: #666;
+      text-decoration: none;
+
+      &:hover, &:active, &:focus {
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+  }
+  .keeping {
+    position: relative;
+    margin-bottom: 10px;
+    .i_check {
+      position: absolute;top: 0;left: 0;
+      width: 20px;height: 20px;
+      margin: 0 4px 0 0;padding: 0;
+      vertical-align: middle;
+    }
+    label {
+      position: static;
+      cursor: pointer;
+      padding-left: 30px;
+      &::before {
+        position: absolute;top: 0;left: 0;
+        width: 20px;height: 20px;
+        background: url(../../images/comm/img-comm.png) -200px 0 no-repeat;
+        content: '';
+      }
+    }
+    input:checked+label::before {
+      background: url(../../images/comm/img-comm.png) -220px 0 no-repeat;
+    }
+  }
+  .warning {
+    display: none;
+    float: none;
+    margin: 10px 0;
+    line-height: 1.4;
+
+    &.open {
+      display: block;
+    }
+  }
+
+  .o_login {
+    text-align: center;
+
+    .i_label {
+      left: 36px;
+    }
+
+    .i_text {
+      width: 291px;
+      margin: 0;
+      padding: 8px 0 6px 35px;
+      background: url(img/ico_openid.gif) no-repeat 10px center;
+    }
+
+    .btn_login {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &.g_login .g_login, &.o_login .o_login {
+    display: block;
+  }
+}
+
+//주요링크 바로가기
+.sec_goto {
+  position: relative;
+  width: 1200px;margin: 0 auto;
+  .lst_goto {
+    overflow: hidden;
+    position: absolute;left: 0; bottom: -100px;
+    width: 101%;margin: 0 -0.5%;
+    li {
+      float: left;position: relative;
+      width: 20%;padding: 0 .5%;
+      &::after {
+        position: absolute;bottom: 20px;right: 32px;
+        height: 46px;
+        background-image: url(../../images/comm/img-comm.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        content: '';
+      }
+      // 191113 수정 S
+      &:first-child a {
+        background: #19a0cf url(../../images/main/bg-pattern1.gif) 0 0 no-repeat;
+      }
+      &:nth-child(2) {
+        &::after {
+          width: 37px;
+        }
+        a {background: #2ea0a1 url(../../images/main/bg-pattern2.gif) 0 0 no-repeat;}
+      }
+      &:nth-child(3) {
+        &::after {
+          width: 39px;
+          background-position: -40px 0;
+        }
+        a {background: #61a34f url(../../images/main/bg-pattern3.gif) 0 0 no-repeat;}
+      }
+      &:nth-child(4) {
+        &::after {
+          width: 45px;
+          background-position: -80px 0;
+        }
+        a {background: #dc7a46 url(../../images/main/bg-pattern4.gif) 0 0 no-repeat;}
+      }
+      &:last-child {
+        margin-right: 0;
+          &::after {
+            width: 47px;
+            background-position: -140px 0;
+          }
+        a {background: #bb8301 url(../../images/main/bg-pattern5.gif) 0 0 no-repeat;}
+      }
+      // 191113 수정 E
+    }
+    a {
+      display: block;
+      height: 100%;height: 200px;padding: 30px 23px;
+      background: red;color: #fff;;
+    }
+    strong {
+      display: block;
+      margin-bottom: 22px;
+      font-size: 1.267em
+    }
+    em {
+      display: block;
+      margin: -8px 0 4px;
+      font-size: 2em;font-family: Verdana;font-weight: 500;
+    }
+  }
+}
+
+// 공지사항
+.nav-tabs li.active a, .nav-tabs li.active a:focus, .nav-tabs li.active a:hover {
+
+}
+.sec_tabbbs {
+  float: left;position: relative;
+  width: 50.4%;height: 340px;
+  background: #fff url(../../images/comm/tab-bg.gif) 0 0 repeat-x;
+  @include border_blue;
+  .nav-tabs {
+    width: 91%;margin-bottom: 13px;
+    border-bottom: none;
+    li {
+      width: 33.333%;
+      &.active, &:focus {
+        .nav-link {
+          border: none;border-right: 1px solid $border_color;
+          color: #000;
+          background: #fff;
+        }
+      }
+      // &:hover {
+      //   .nav-link {
+      //     display: block;
+      //     height: 50px;padding: 0;
+      //     text-align: center;line-height: 50px;font-size: 1.267rem;color: #666;
+      //     border: none;
+      //     border-right: 1px solid $border_color; border-radius: 0;
+      //     border-bottom: 1px solid $border_color;
+      //     background: #f7f8fa;
+      //   }
+      // }
+    }
+    .nav-link {
+      display: block;
+      height: 50px;padding: 0;
+      text-align: center;line-height: 50px;font-size: 1.267rem;color: #666;
+      border: none;
+      border-right: 1px solid $border_color; border-radius: 0;
+      border-bottom: 1px solid $border_color;
+      background: #f7f8fa;
+    }
+  }
+  .tab-content {
+    width: 93%;margin: 0 auto;
+  }
+  .link_more {
+    position: absolute;top: 0;right: 0;
+    width: 9%;height: 50px;
+    // text-indent: -9999px;
+    content: "\f2c2";font-family: "LineAwesome";text-align: center;line-height: 50px;font-size: 2rem;
+  }
+}
+.lst_bbs_type1 {
+  a {
+    overflow: hidden;
+    display: block;
+    padding: 11px 0;
+  }
+  span {
+    display: inline-block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+    float: left;position: relative;
+    width: 70%;padding-left: 12px;
+    &::before {
+      position: absolute;top: 8px;left: 0;
+      width: 4px;height: 4px;
+      background: #a2a2a2;
+      content: '';
+    }
+  }
+  time {
+    float: right;
+  }
+}
+
+//팝업존
+.sec_g {
+  .tit_main {
+    display: block;
+    padding: 13px 15px;
+    border-bottom: 1px solid $border_color;
+    font-size: 1.267rem;color: #000;font-weight: 700;
+  }
+}
+.sec_popupzon {
+  float: right;position: relative;
+  width: 23%;height: 340px;
+  background: #fff;
+  @include border_blue;
+  a {overflow: hidden;display: block;}
+  img {
+    display: block;
+    width: 274px;height: 290px;object-fit: cover;
+  }
+  .fban_ctrl {
+    position: absolute;top: 8px;right: 14px;
+  }
+}

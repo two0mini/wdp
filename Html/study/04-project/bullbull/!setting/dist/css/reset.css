@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button,header,main,article,footer,i {margin:0;padding:0;box-sizing:border-box;}
+fieldset,img {border:0 none}
+dl,ul,ol,menu,li {list-style:none}
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+input,select,textarea,button {vertical-align:middle;}
+button {border:0 none;background-color:transparent;cursor:pointer}
+body {background:#fff}
+/* 기본 폰트 설정 */
+html,body,th,td,input,select,textarea,button {font-size:14px;line-height:1.5;font-family:'NanumSquare',"Malgun Gothic", "Apple Gothic", sans-serif;font-weight: 400;color:#333;letter-spacing: -.2px;} /* color값은 디자인가이드에 맞게사용 */
+a {color:#333;text-decoration:none}
+a:active, a:hover, a:focus {text-decoration:none; color: #0072bc;}
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+hr {display: none;}
+input[type=password] {font-family: 'Malgun Gothic';}
+
+/* global */
+.ir_pm {display:block;overflow:hidden;font-size:0px;line-height:0;text-indent:-9999px} /* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir_wa {display:block;overflow:hidden;position:relative;z-index:-10;width:100%;height:100%} /* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.blind, caption, legend {overflow:hidden;position:absolute;width:0;height:0;line-height:0;text-indent:-9999px} /* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+
+.f_l {float:left}
+.f_r {float:right}
+.col_left {float: left;}
+.col_right {float: right;}
+.cl_b {width:0;height:0;font-size:0;line-height:0;clear:both}
+.show {display:block}
+.hide {display:none}
+.tbl {border-collapse:collapse;border-spacing:0} /* 테이블 초기화 */
+.container_w, .clear_g {display:block;overflow:visible;width:auto;clear:both;*zoom:1}
+.container_w:after, .clear_g:after {display:block;visibility:hidden;height:0;font-size:0;clear:both;content:''}
+
+/* skipnavigation */
+#skipnavigation a {position: absolute;left: -3000%;}
+#skipnavigation a:focus {display: block;left: 0;top: 0;z-index: 10000000000;width: 100%;height: 30px;line-height: 30px;background: #0072bc;color: #fff;text-align: center;}
+
+/* line */
+.txt_bar {font-size:12px;color:#b6b6b6} /* 텍스트형 구분라인 */
+
+/* Background Image - common 요소 */
+.img_g {display: inline-block;overflow: hidden;background:url(../../images/comm/img-comm.png) no-repeat;vertical-align: top;} /* 이미지 */
+.btn_comm {background:url() no-repeat} /* 버튼 */
+.ico_comm {background:url() no-repeat} /* 아이콘 */
+.tit_comm {background:url() no-repeat} /* 타이틀 */
+.line_comm {background:url() no-repeat} /* 라인 */
+
+.ell {display: inline-block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+/* font */
+@import url(//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 300;
+ src: url(../fonts/NanumSquareL.eot);
+ src: url(../fonts/NanumSquareL.eot?#iefix) format('embedded-opentype'),
+      url(../fonts/NanumSquareL.woff) format('woff'),
+      url(../fonts/NanumSquareL.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 400;
+ src: url(../fonts/NanumSquareR.eot);
+ src: url(../fonts/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+      url(../fonts/NanumSquareR.woff) format('woff'),
+      url(../fonts/NanumSquareR.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 700;
+ src: url(../fonts/NanumSquareB.eot);
+ src: url(../fonts/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+      url(../fonts/NanumSquareB.woff) format('woff'),
+      url(../fonts/NanumSquareB.ttf) format('truetype');
+}
+/* @font-face {
+ font-family: 'NanumSquare';
+ font-weight: 800;
+ src: url(../fonts/NanumSquareEB.eot);
+ src: url(../fonts/NanumSquareEB.eot?#iefix) format('embedded-opentype'),
+      url(../fonts/NanumSquareEB.woff) format('woff'),
+      url(../fonts/NanumSquareEB.ttf) format('truetype');
+} */
+
+/*grid-12*/
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* body {background: url(../../pc.png) center -29px no-repeat;}.wrap {opacity: .8} */

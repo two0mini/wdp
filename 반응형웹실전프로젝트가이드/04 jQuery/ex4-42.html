@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본 효과 메서드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }        
+        li {
+            list-style: none;
+        }       
+        a {
+            font-family: "돋움";
+            font-size: 12px;
+            color: #000;
+            text-decoration: none;
+        }        
+        #visual {
+            width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+         #pic {
+            height: 563px;
+            overflow: hidden;           
+            position: relative;
+            box-shadow: 1px 5px 10px 2px #666;
+        }        
+        #pic > div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        #control {
+            position: absolute;    
+            width: 100%;
+            left: 0;
+            bottom: 30px;          
+            text-align: center;            
+        }
+        #control a {
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            background: #000;            
+            color: #fff;           
+            line-height: 26px;
+            font-size: 0.8em;
+            border-radius: 14px;
+            margin: 0 2px
+        }
+        #control a.on {
+            background: #ff6600;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          // 이부분에 코드를 작성합니다. 
+        });
+    </script>
+</head>
+<body>
+    <div id="visual">
+        <div id="pic">            
+                <div><a href="#"><img src="f1.jpg" alt="1"></a></div>
+                <div><a href="#"><img src="f2.jpg" alt="2"></a></div>
+                <div><a href="#"><img src="f3.jpg" alt="3"></a></div>
+                <div><a href="#"><img src="f4.jpg" alt="4"></a></div>            
+        </div>        
+        <div id="control">
+            <a href="javascript:;">1</a>
+            <a href="javascript:;">2</a>
+            <a href="javascript:;">3</a>
+            <a href="javascript:;">4</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+
+
+ 2020.2.6(목)
+
+코드에디터  : Atom, brackets 
+
+(emmet, beautify, remote-ftp) 설치권장
+
+
+닷홈 무료웹호스팅
+
+FTP 소프트웨어 : FileZilla

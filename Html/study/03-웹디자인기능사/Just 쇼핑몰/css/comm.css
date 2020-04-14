@@ -1,0 +1,419 @@
+@charset "utf-8";
+
+/* pc
+
+@media only screen and (min-width: 1200px) {
+    body {background: pink;}
+  } */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    list-style: none;
+    color: #222328;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.clear_g:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 a {
+    display: block;
+    width: 200px;
+    height: 100px;
+    background: url(../image/logo1.png) 0 50% no-repeat;
+    margin-left: 20px;
+    text-indent: -9999px;
+}
+
+header nav {
+    width: 50%;
+}
+
+header .nav-depth1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav-depth1 > li {
+    position: relative;
+    width: 25%;
+    text-align: center;
+}
+
+header .nav-depth1 > li > a {
+    display: block;
+    height: 100px;
+    line-height: 100px;
+    transition: all .5s;
+}
+
+header .nav-depth1 > li > a:hover {
+    background: tomato;
+    color: #fff;
+}
+
+header .nav-depth2 {
+    /*display: none;*/
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    padding-top: 20px;
+    transition: all .5s;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .2s;
+}
+
+header nav:hover .nav-depth2,
+header nav:active .nav-depth2 {
+    height: 200px;
+    opacity: 1;
+}
+
+header .nav-depth2 a {
+    display: block;
+    padding: 10px 0;
+    color: #fff;
+}
+
+header .nav-depth2 a:hover {
+    color: tomato;
+}
+
+.nav-bg {
+    /* display: none;*/
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    /* width: 100%;*/
+    height: 0;
+    opacity: 0;
+    background: #555;
+    transition: all .5s;
+}
+
+header nav:hover .nav-bg,
+header nav:active .nav-bg{
+    /* display: block;*/
+    height: 200px;
+    opacity: 1;
+}
+
+/* nav에 마우스 오버시 
+.nav-depth2와 .nav-bg를 display:block */
+
+
+.slide {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.slide ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    display: flex;
+}
+
+.slide a {
+    display: block;
+    height: 300px;
+}
+
+.slide li {
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: 0 0  no-repeat;
+}
+
+.slide li:first-child {
+    background-image: url(../image/S1.jpg);
+}
+
+.slide li:nth-child(2) {
+    background-image: url(../image/S2.jpg);
+}
+
+.slide li:last-child {
+    background-image: url(../image/S3.jpg);
+}
+
+.slide img {
+    width: 100%;
+}
+
+.container {
+    overflow: hidden;
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.container img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.container section {
+    width: 30%;
+}
+
+.container section:first-child {
+    width: 40%;
+}
+
+.container section:nth-child(2) {
+    width: 20%;
+}
+
+.container section h2 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+/*tab*/
+
+.col1 {
+    display: flex;
+    position: relative;
+}
+
+.col1 > div {
+    width: 50%;
+}
+
+.col1 h2 {
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    border: 1px solid #333;
+    /*background: #eee;*/
+}
+
+.col1 .cont {
+    width: 100%;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    display: none;
+}
+
+.col1 .on .cont {
+    display: block;
+}
+
+col1 .on h2 {
+    background: #333;
+}
+
+col1 .on h2 a {
+    color: #fff;
+}
+
+/* .tab-gal {
+    display: none;
+}
+
+.tab-bbs {
+    display: none;
+} */
+
+.tab-bbs a {
+    display: block;
+    padding: 5px 0 5px 10px;
+}
+
+.tab-bbs span {
+    float: right;
+    font-size: 12px;
+    color: #777;
+}
+
+.tab-bbs li {
+    position: relative;
+}
+
+.tab-bbs li::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    background: #555;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    border-radius: 50%;
+}
+
+.tab-gal ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-gal li {
+    width: 30%
+}
+
+.tab-gal img {
+    height: 130px;
+    object-fit: cover;
+}
+
+footer {
+    height: 100%;
+    background: lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer h1 {
+    width: 20%;
+}
+
+footer h1 a {
+    display: block;
+    margin: 30px 0 0 20px;    
+}
+
+footer h1 img {
+    filter: grayscale(50%);
+}
+
+footer address {
+    margin: 30px 0 10px;
+}
+
+footer .copyright {
+    width: 40%;
+}
+
+footer .sns {
+    width: 30%;
+    padding-right: 10px;
+    text-align: right;
+   }
+
+footer .sns a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.container img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+footer .sns img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+
+}
+
+#modal {
+    position: relative;
+    /*display: none;*/
+    width: 25%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+#modal h2 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #000;
+}
+
+#modal button {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+   background: #fff url(../image/)50% 50% no-repeat;
+    background-size: 70% auto;
+    text-indent: -9999px;
+}
+
+.modal-wrap {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1100;
+    background: rgba(0,0,0,.5);
+    justify-content: center;
+    align-items: center;    
+}
+
+/*
+.modal-wrap.on {
+    display: flex;
+}
+*/
+
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {
+    body {background: red;}
+  } */ 
+
+  /* 모바일 */
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* @media only screen and (min-width: 600px) {
+    body {background: green;}
+
+  } */
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* @media only screen and (max-width: 992px) {
+    body {background: blue;}
+    .wrap {width: 100%;}
+   header h1 a {
+       width: 20%;
+   }
+  }  */
+  
+  /* tablet
+  /* Large devices (laptops/desktops, 992px and up) */
+   /* @media only screen and (min-width: 992px) {
+   body {background: orange;}
+  }  */

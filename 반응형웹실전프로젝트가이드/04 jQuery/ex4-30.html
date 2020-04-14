@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복사 및 감싸기 관련 메서드</title>
+    <style>
+        li {
+            display: inline-block;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".m1").clone().insertAfter(".m1");
+            $("#m2 strong").wrap("<div></div>");
+            $("#m3 strong").wrapAll("<div></div>");
+            $("#m4").wrapInner("<div></div>");
+            $("#m5").replaceWith("<p>변경6</p>");
+            $("<p>변경7</p>").replaceAll("#m6");
+        });
+    </script>
+</head>
+<body>
+    <ul class="m1">
+        <li><img src="1.jpg" alt="HTML"></li>
+        <li><img src="2.jpg" alt="CSS"></li>
+        <li><img src="3.jpg" alt="Javascript"></li>
+        <li><img src="4.jpg" alt="jQuery"></li>
+    </ul>
+    <div id="m2">
+        <strong>내용1</strong><strong>내용2</strong>
+    </div>
+    <div id="m3">
+        <strong>내용3</strong><strong>내용4</strong>
+    </div>
+    <div id="m4">내용5</div>
+    <div id="m5">내용6</div>
+    <div id="m6">내용7</div>
+</body>
+</html>

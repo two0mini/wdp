@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>flexbox</title> 
+<style type="text/css">
+    .flexbox {
+        width: 750px;
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        height: 200px;
+        background: #ccc;
+    }
+    .flexbox > div {
+        flex: 1 1 100px;
+        -webkit-flex: 1 1 100px;
+        -ms-flex: 1 1 100px;
+        background: darkblue;
+        margin: 10px;
+        font-size: 20px;
+        color:#fff;
+    }
+</style>
+</head>
+<body>
+    <div class="flexbox">
+        <div>child1</div>
+        <div>child2</div>
+        <div>child3</div>
+        <div>child4</div>
+        <div>child5</div>
+        <div>child6</div>
+        <div>child7</div>
+        <div>child8</div>
+    </div>
+</body>

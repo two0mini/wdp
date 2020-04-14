@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>키보드 이벤트</title>
+    <style>
+        body{
+            font-size: 12px;
+        }
+        textarea{
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+        textarea.on{
+            background: #ff6600;
+            color: #fff;
+        }
+        #display {
+            width: 300px;
+            height:100px;
+            word-break: break-all;
+            border: 1px solid #000;
+            overflow: auto;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("textarea").keydown(function() {
+                $(this).addClass("on");
+            }).keyup(function() {
+                $("#display").text($(this).val());
+            });            
+        });
+    </script>
+</head>
+<body>
+    <textarea></textarea>   
+    <div id="display"></div>
+</body>
+</html>

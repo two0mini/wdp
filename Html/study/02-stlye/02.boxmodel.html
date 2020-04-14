@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>BoxModel</title>
+    <style type="text/css">
+        p {
+            border: 1px solid blue;
+        }
+
+        .box {
+            width: 100%;
+            height: 200px;
+            max-width: 800px;
+            min-width: 500px;
+            background: tomato;
+            margin-bottom: 10px;
+        }
+ 
+    </style>
+</head>
+
+<body>
+    <div class="box box1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorum, quam exercitationem, perferendis adipisci expedita assumenda aspernatur amet et sed animi iusto ducimus inventore quis, consequatur asperiores qui quasi officiis.
+    </div>
+    <div class="box box2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorum, quam exercitationem, perferendis adipisci expedita assumenda aspernatur amet et sed animi iusto ducimus inventore quis, consequatur asperiores qui quasi officiis.
+    </div>
+    <div class="box box3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorum, quam exercitationem, perferendis adipisci expedita assumenda aspernatur amet et sed animi iusto ducimus inventore quis, consequatur asperiores qui quasi officiis.
+    </div>
+    
+    <hr>
+    <style>
+        .padding {
+            width: 500px;
+            border: 1px solid red;
+            padding: 50px 10px 10px;
+            
+        }
+        
+        .padding.boxsizing {
+            box-sizing: border-box;            
+        }
+        
+    </style>
+    
+    <div class="padding">
+        드디어 섭씨 40도가 넘었다. 엄마 뱃속보다 뜨거운 날씨, 감사해야 할까? 해가 뜨거울 뿐인데 오존층이 파괴되어 오존주의보가 발령되었다.
+    </div>
+    
+     <div class="padding boxsizing">
+        드디어 섭씨 40도가 넘었다. 엄마 뱃속보다 뜨거운 날씨, 감사해야 할까? 해가 뜨거울 뿐인데 오존층이 파괴되어 오존주의보가 발령되었다.
+    </div>
+    
+    <hr>
+    <style>
+        .margin {
+            background: lightblue;
+            padding: 20px;
+            margin: 50px;
+            
+        }
+        .margin2 {
+            width: 50%;
+            margin: auto;
+        }
+    
+    </style>
+    <p class="margin margin1">달걀을 사다 놓기만 해도 병아리로 부화된다는 농담같은 이야기가 현재 대한민국의 실화다.</p>
+    <p class="margin margin2">유래없이 뜨거운 날씨이다. 섭씨 38도를 웃도는 온도에서 에어콘은 이제 살기 위한 도구가 되었다.</p>
+    <p class="margin margin3">달걀을 사다 놓기만 해도 병아리로 부화된다는 농담같은 이야기가 현재 대한민국의 실화다.</p>
+    <p class="art3">드디어 섭씨 40도가 넘었다. 엄마 뱃속보다 뜨거운 날씨, 감사해야 할까? 해가 뜨거울 뿐인데 오존층이 파괴되어 오존주의보가 발령되었다.</p>
+</body>
+
+</html>

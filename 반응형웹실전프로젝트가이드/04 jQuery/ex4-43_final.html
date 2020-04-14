@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본 효과 메서드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "돋움";
+            font-size: 12px;
+            color: #000;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1{
+            text-align:center;
+            padding: 10px 0;
+        }
+        #gnb {
+            width: 600px;
+            margin: 0 auto;
+        }
+        #gnb:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #gnb .m {
+            float: left;
+            width: 120px;           
+            text-align: center;
+            position: relative;            
+        } 
+        #gnb .m > a {
+            display: block;
+            height: 40px;            
+            line-height: 40px;
+            font-size: 1.4em;
+        }        
+        #gnb .m.on > a {
+            border-bottom: 4px solid #725f3f;
+            box-sizing: border-box;
+        }     
+        #gnb .m ul {
+            position: absolute;
+            left: 0;
+            top: 40px;            
+            width: 100%;
+            background: #000;
+            display: none;
+        }        
+        #gnb .m ul li a {
+            display: block;
+            color: #fff;
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+        }
+        #gnb .m ul li:last-child a{
+            border: none;
+        }
+        #gnb .m ul li a:hover,
+        #gnb .m ul li a:active,
+        #gnb .m ul li a:focus {            
+            background: #fff;
+            color: #000;
+        }
+        #visual {
+            background: url(f1.jpg) no-repeat center center;             
+            height: 300px;
+        }
+        #visual a{
+            display: block;
+            width: 1000px;
+            height: 300px;
+            margin: 0 auto;
+            text-indent: -99999%;
+            overflow: hidden;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#gnb .m").on("mouseenter focusin", function() {
+                $("ul", this).show();
+                $(this).siblings("li").find("ul").hide();
+                $(this).addClass("on").siblings("li").removeClass("on");                
+            }).on("mouseleave", function() {
+                $("#gnb ul").hide().add("#gnb .m").removeClass("on");                
+            });
+            $("*:not('#gnb a')").on("focus", function() {
+                $("#gnb ul").hide().add("#gnb .m").removeClass("on");
+            });
+        });
+    </script>
+</head>
+<body>    
+    <h1><a href="#">기본 효과 메서드</a></h1>
+    <ul id="gnb">
+        <li class="m"><a href="#">메뉴1</a>
+            <ul>
+                <li><a href="#">메뉴1_1</a></li>
+                <li><a href="#">메뉴1_2</a></li>
+                <li><a href="#">메뉴1_3</a></li>
+                <li><a href="#">메뉴1_4</a></li>
+            </ul>
+        </li>
+        <li class="m"><a href="#">메뉴2</a>
+            <ul>
+                <li><a href="#">메뉴2_1</a></li>
+                <li><a href="#">메뉴2_2</a></li>
+                <li><a href="#">메뉴2_3</a></li>
+                <li><a href="#">메뉴2_4</a></li>
+            </ul>
+        </li>
+        <li class="m"><a href="#">메뉴3</a>
+            <ul>
+                <li><a href="#">메뉴3_1</a></li>
+                <li><a href="#">메뉴3_2</a></li>
+                <li><a href="#">메뉴3_3</a></li>
+                <li><a href="#">메뉴3_4</a></li>
+            </ul>
+        </li>
+        <li class="m"><a href="#">메뉴4</a>
+            <ul>
+                <li><a href="#">메뉴4_1</a></li>
+                <li><a href="#">메뉴4_2</a></li>
+                <li><a href="#">메뉴4_3</a></li>
+                <li><a href="#">메뉴4_4</a></li>
+            </ul>
+        </li>
+        <li class="m"><a href="#">메뉴5</a>
+            <ul>
+                <li><a href="#">메뉴5_1</a></li>
+                <li><a href="#">메뉴5_2</a></li>
+                <li><a href="#">메뉴5_3</a></li>
+                <li><a href="#">메뉴5_4</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div id="visual"><a href="#">비주얼</a></div>
+</body>
+</html>

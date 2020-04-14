@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>$.noConflict() 메서드</title>    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #ff6600;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+        }        
+        div:nth-child(2){            
+            position: absolute;
+            right: 0;
+            top :0 ;
+            background-color: #ff0000;
+        }        
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>    
+    <script>
+        var jQ = $.noConflict();
+        jQ(document).ready(function() {
+            jQ("div:nth-child(2)").delay(1000).animate({right: "100%", marginRight: -205}, 2000, "easeOutBounce");
+        });
+    </script>
+</head>
+<body>
+    <div>jQuery</div>   
+    <div>프레임워크</div> 
+</body>
+</html>

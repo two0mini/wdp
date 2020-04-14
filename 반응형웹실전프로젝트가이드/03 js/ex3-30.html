@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>클로져</title>
+    <script>
+        function multiply(n) {
+            return function(){
+                return n *= n;
+            }
+        }
+        var num1 = multiply(10);
+        console.log(num1()); // 10 * 10 = 100
+        console.log(num1()); // 100 * 100 = 10000
+        var num2 = multiply(20);
+        console.log(num2()); // 20 * 20 = 400
+        console.log(num2()); // 400 * 400 = 160000 
+    </script>
+</head>
+<body>
+</body>
+</html>

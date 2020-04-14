@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본 효과 메서드</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #333;
+            display: none;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#m1 button:eq(0)").click(function() {
+                $("#m1 .box").show();
+            });
+            $("#m1 button:eq(1)").click(function() {
+                $("#m1 .box").hide();
+            });
+            $("#m1 button:eq(2)").click(function() {
+                $("#m1 .box").toggle("fast", "swing");
+            });
+            $("#m2 button:eq(0)").click(function() {
+                $("#m2 .box").slideDown("fast", "swing");
+            });
+            $("#m2 button:eq(1)").click(function() {
+                $("#m2 .box").slideUp("slow", "swing");
+            });
+            $("#m2 button:eq(2)").click(function() {
+                $("#m2 .box").slideToggle(250, "linear");
+            });
+            $("#m3 button:eq(0)").click(function() {
+                $("#m3 .box").fadeIn("fast", "swing", function() {
+                    $(this).text("jQuery");
+                });
+            });
+            $("#m3 button:eq(1)").click(function() {
+                $("#m3 .box").fadeOut("fast", "swing", function() {
+                    $(this).text("내용3");
+                });
+            });
+            $("#m3 button:eq(2)").click(function() {
+                $("#m3 .box").fadeToggle("fast", "swing", function() {
+                    if($(this).css("display") == "none"){
+                        $(this).text("내용3");
+                    }else {
+                        $(this).text("jQuery");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="m1">
+        <button>show</button>
+        <button>hide</button>
+        <button>toggle</button>
+        <div class="box">내용1</div>
+    </div>
+    <div id="m2">
+        <button>slideDown</button>
+        <button>slideUp</button>
+        <button>slideToggle</button>
+        <div class="box">내용2</div>
+    </div>
+    <div id="m3">
+        <button>fadeIn</button>
+        <button>fadeOut</button>
+        <button>fadeToggle</button>
+        <div class="box">내용3</div>
+    </div>
+</body>
+</html>

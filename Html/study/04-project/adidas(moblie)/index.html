@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <!-- 반응형 페이지 뷰포트 설정 -->
+  <meta name="apple-mobile-web-app-title" content="OCI" />
+  <title>Adidas(M)</title>
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"> 
+  <link rel="stylesheet" href="./dist/css/module/slick.css" />  <!-- 이미지 슬라이드 -->
+  <link rel="stylesheet" href="./dist/css/module/slick-theme.css" />  <!-- 이미지 슬라이드 테마 -->
+  <link rel="stylesheet" type="text/css" href="./dist/css/comm.css">   <!-- my css -->
+  <script src="./dist/js/module/jquery.min.js"></script>   <!-- 필수 jQuery -->
+  <script src="./dist/js/module/slick.min.js"></script>  <!-- 이미지슬라이드 -->
+  <script src="./dist/js/module/jquery.scrollUp.min.js"></script> <!-- scroll top -->
+  <script src="./dist/js/comm.js"></script> <!-- my js -->
+  <!-- ie9 이하 버전에서 잘 보이도록 추가 -->
+  <!--[if lt IE 9]>
+  	<script src="./dist/js/module/html5.js"></script>
+  	<script src="./dist/js/module/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <div class="wrap">
+    <!-- header -->
+    <header>
+      <div class="inner_header">
+        <h1>
+          <a href="#">Adidas</a>
+        </h1>
+        <nav>
+          <div class="nav-bg"></div>
+          <a href="#" class="nav-bar" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </a>  
+           
+          <div class="nav-wrap">
+            <a href="#" class="nav-close">
+              <i class="las la-arrow-left"></i> 
+              <span class="blind">닫기</span></a>        
+
+          <!-- <script>
+          function myFunction(x) {
+            x.classList.toggle("change");
+          }
+          </script> -->
+         
+            <ul class="nav-depth1">
+              <li>
+                    <li class="on">
+                      <a href="#">MAN</a>
+                <ul class="nav-depth2">
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">의류</a></li>
+                  <li><a href="#">신발</a></li>
+                  <li><a href="#">용품</a></li>
+                </ul>
+              </li>
+              <li>
+                    <li class="on">
+                      <a href="#">WOMAN</a>
+                <ul class="nav-depth2">
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">의류</a></li>
+                  <li><a href="#">신발</a></li>
+                  <li><a href="#">용품</a></li>
+                </ul>
+              </li>
+              <li>
+                    <li class="on">
+                      <a href="#">KID</a>
+                <ul class="nav-depth2">
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">의류</a></li>
+                  <li><a href="#">신발</a></li>
+                  <li><a href="#">용품</a></li>
+                </ul>
+              </li>
+              <li>
+                    <li class="on">
+                      <a href="#">SPORTS</a>
+                <ul class="nav-depth2">
+                  <li><a href="#">축구</a></li>
+                  <li><a href="#">농구</a></li>
+                  <li><a href="#">아웃도어</a></li>
+                  <li><a href="#">트레이닝</a></li>
+                </ul>
+              </li>
+              <li>
+                    <li class="on">
+                      <a href="#">About adidas</a>
+                <ul class="nav-depth2">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Sub</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+            
+           
+        </nav>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <div class="slide-main">
+      <img src="./images/adidas Running.mp4" alt="">
+    </div>
+    
+    <!-- container -->
+    <div class="container">
+      <div class="contents">
+        <!-- News -->
+        <div class="sec_g sec_news">
+          <h2>news</h2>
+          <div class="cont_g">
+            <ul>
+              <li>
+                <a href="#">
+                  <div class="col-left">
+                    <img src="./images/img1.png">
+                  </div>
+                  <div class="col-right">
+                    <strong>Event & Community</strong>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="col-left">
+                    <img src="./images/img2.png" alt="">
+                  </div>
+                  <div class="col-right">
+                    <strong>News & Notice</strong>               
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="col-left">
+                    <img src="./images/img3.png" alt="">
+                  </div>
+                  <div class="col-right">
+                    <strong>Product Review</strong>
+                    
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- //container -->
+
+    <!-- footer -->
+    <footer id="footer_wrap">
+      <div class="footer">
+        <div class="foo_lef">
+          <img src="" alt="" />
+          <p class="foo_add">       
+          </p>
+        </div>
+        <!-- foo_lef : e  -->
+        <div class="foo_rit">
+          <ul>
+            <!-- <li class="first"><a href="/sub/utility/policy.asp">개인정보처리방침</a></li> -->
+            <li>
+              <div class="select wid">
+                <button type="button" class="my_value">회원가입 <span class="ctrl"><i class="las la-caret-down"></i></span></button>
+                
+               </div>
+            </li>
+            <ul class="lang">       
+            <li><a href="#" class="lang_select">KO</a></li>
+            <li><a href="#" class="lang_select">EN</a></li>
+            <li><a href="#" class="lang_select">CN</a></li>
+          </ul> 
+          </ul>
+        </div>
+        <!-- foo_rit -->
+      </div>
+      <!-- footer : e  -->
+    </footer>
+    <!-- //footer -->
+
+  </div>
+
+<script>
+  $(function () {
+  $.scrollUp({
+    scrollName: 'scrollUp', // Element ID
+    topDistance: '300', // Distance from top before showing element (px)
+    topSpeed: 300, // Speed back to top (ms)
+    animation: 'fade', // Fade, slide, none
+    animationInSpeed: 200, // Animation in speed (ms)
+    animationOutSpeed: 200, // Animation out speed (ms)
+    scrollText: 'Scroll to top', // Text for element
+    activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+  });
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>   
+<meta charset="utf-8">
+<title>선택자의 우선순위</title> 
+<style type="text/css">       
+    p { color: pink; }
+    #ctxt { color: orange; }
+    p.atxt { color: blue !important; }
+    p.atxt.btxt { color: magenta; }
+    p:first-child  { color: red; }
+</style> 
+</head> 
+<body>    
+    <p id="ctxt" class="atxt btxt" style="color:green;">
+        한국인은 비타민 D가 부족한 사람이 많다.
+    </p>
+    <p>비타민D는 햇빛에 있다.</p> 
+</body>
+</html>

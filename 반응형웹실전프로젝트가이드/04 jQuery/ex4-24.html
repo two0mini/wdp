@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>위치 관련 메서드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #outer {
+            width: 500px;
+            height: 500px;
+            margin: 50px;
+            position: relative;
+            background: #ff6600;
+        }
+        #inner {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 80px;
+            top: 50px;
+            background: #ccc;
+        }    
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <!-- <script>
+        $(document).ready(function() {
+            console.log($("#inner").offset().left);
+            console.log($("#inner").offset().top);
+            console.log($("#inner").position().left);
+            console.log($("#inner").position().top);
+        });
+    </script> -->
+</head>
+<body>
+    <div id="outer">
+        <div id="inner">내용</div>
+    </div>
+
+    <script>
+        console.log($('#inner').offset().left);
+        console.log($('#inner').offset().top);
+        console.log($('#inner').position().left);
+        console.log($('#inner').position().top);
+
+    
+    </script>
+</body>
+</html>

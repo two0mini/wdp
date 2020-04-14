@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>navigator 객체</title>
+    <script>
+        var browser = navigator.userAgent;   
+        alert(browser);
+        var browserName = '';
+        if (browser.match(/Trident/)) {
+            browserName = '인터넷 익스플러';
+        } else if (browser.match(/Chrome/)) {
+            browserName = '크롬';
+        } else if (browser.match(/Firefox/)) {
+            browserName = '파이어폭스';
+        } else {
+            browserName = '알 수 없는 브라우저';
+        }
+        alert(browserName);
+    </script>
+</head>
+<body>    
+</body>
+</html>

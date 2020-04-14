@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>배경이미지</title> 
+<style type="text/css">
+    html {font-size: 11px;}
+    hr {margin: 20px 0;}
+    body {
+        background-image: url(./images/bg_grid.gif);
+        background-repeat: repeat;
+    }
+</style>
+</head> 
+<body>
+<!-- background -->
+   <style>
+       .bg {
+           background: rgba(255, 255, 0, 0.46);
+       }
+    </style>
+    <p class="bg">
+        어니스트... <br>
+        헤밍웨이가 한때 좌익의 편에 있었다는 것은 몰랐었다. 그는 인간이 위대한 것은 위험을 감수한다는 데 있다고 했다. 사자도 호랑이도 위험을 감수하겠지만 왠지 그 말이 마음에 들었다. 글을 쓰지 못하는 그의 손을 보며 아이러니하게도 쓸게 너무 많은 나는 행복해야겠구나... 싶었다.
+    </p>
+    <hr>
+<!--  background position  -->
+    <style>
+        .bg_position {
+            padding: 100px;
+            border: 5px solid red;
+            background-image: url(./images/ani_spade.png);
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+    </style>
+    <h2>bg position</h2>
+    <ul class="bg_position">
+           <li>귀국 日크루즈 승객들, 인천공항 격리시설 도착…의심증상 없어</li>
+           <li>코로나19 지역감염 현실화? '성동구 32번째 확진자'…의협 "1차 방역 실패"</li>
+           <li>아시아나 '비상경영' 외친 날, 터져나온 특혜의혹</li>
+           <li>진중권, '임미리 맹폭' 유시민에 직격탄 "만담을 차지게 해···</li>
+    </ul>
+    
+    <hr>
+    <!--  background attachment  -->    
+    <style>
+        .bg_attachment {
+            padding: 100px;
+            background: #fff url(./image/tree.jpg) 0 100% no-repeat;
+            background-attachment: fixed;
+        }  
+    </style>
+    <div class="bg_attachment">
+        <p>패션의 완성은 자연이다.<br>멋지고도 순수한 자연만큼 패셔너블한게 있을까! <br>강렬하고 화려해서가 아니라 적절한 시기와 적절한 장소, 그리고 풍요로운 볼거리를 제공해주고 있지 않나.<br>
+        조심스럽게 살펴보면 자연이 보여주고 있는 모든것이 옷이고 장신구, 신발들이다..</p>
+        <p class="bg_fixed"></p>
+        <p class="btm">최고의 패션, 자연을 팝니다... </p>
+    </div>
+    
+    <hr>
+    <!--  background size  -->    
+    <style>
+        .who {
+            height: 150px; margin-bottom: 10px;
+            background: url(./images/slide-top.jpg) 0 0 no-repeat;
+            border: 1px solid red;
+        }
+        .who1 {
+          background-size: 500px; 150px; 
+            
+        }
+        .who2 {            
+            background-size: 100% auto;
+        }
+        .who3 {            
+            background-size: auto;          
+        }
+        .who4 {            
+            background-size: contain;
+              background-position: 50%;
+        }
+        /* 짧은 축을 기준으로 꽉차게 */
+        
+        .who5 {            
+            background-size: cover;
+        }
+        /* 긴 축을 기준으로 꽉 차게 */
+        
+    </style>
+    
+    <div class="bg_size">
+        <div class="who who1"></div>
+        <div class="who who2"></div>
+        <div class="who who3"></div>
+        <div class="who who4"></div>
+        <div class="who who5"></div>
+    </div>
+    
+    
+    <hr>
+    <!--  background gradient  -->    
+    <style>
+        .bg_gradient {
+            height: 300px;
+            background-image: linear-gradient(-45deg, red, yellow);
+        }
+    </style>
+    <div class="bg_gradient">
+        
+    </div>
+</body> 
+</html>

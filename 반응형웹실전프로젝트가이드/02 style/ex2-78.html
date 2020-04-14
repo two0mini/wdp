@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>flexbox</title> 
+<style type="text/css">
+    .flexbox {
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        height: 200px;
+        background: #ccc;
+    }
+    .flexbox > div {
+        flex: 0 0 100px;
+        -webkit-flex: 0 0 100px;
+        -ms-flex: 0 0 100px;
+        background: darkcyan;
+        margin: 10px;
+    }
+</style>
+</head>
+<body>
+    <div class="flexbox">
+        <div><img src="img/flex.png" alt="flex"></div>
+        <div><img src="img/flex.png" alt="flex"></div>
+        <div><img src="img/flex.png" alt="flex"></div>
+    </div>
+</body>
