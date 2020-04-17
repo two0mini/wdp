@@ -1,12 +1,7 @@
 @charset "utf-8";
 
-/* pc
 
-@media only screen and (min-width: 1200px) {
-    body {background: pink;}
-  } */
-
-  * {
+* {
     margin: 0;
     padding: 0;
     font-size: 14px;
@@ -24,7 +19,7 @@
 }
 
 .wrap {
-    width: 1200px;
+    width: 1100px;
     margin: 0 auto;
 }
 
@@ -170,7 +165,7 @@ header nav:active .nav-bg{
     width: 100%;
 }
 
-.container {
+.contents {
     overflow: hidden;
     display: flex;
     height: 200px;
@@ -335,85 +330,3 @@ footer .sns a {
     height: 120px;
     object-fit: cover;
 }
-
-footer .sns img {
-    width: 30px;
-    height: 30px;
-    object-fit: cover;
-
-}
-
-#modal {
-    position: relative;
-    /*display: none;*/
-    width: 25%;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 30px;
-}
-
-#modal h2 {
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    font-size: 16px;
-    border-bottom: 1px solid #000;
-}
-
-#modal button {
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    width: 30px;
-    height: 30px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-   background: #fff url(../image/)50% 50% no-repeat;
-    background-size: 70% auto;
-    text-indent: -9999px;
-}
-
-.modal-wrap {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 1100;
-    background: rgba(0,0,0,.5);
-    justify-content: center;
-    align-items: center;    
-}
-
-/*
-.modal-wrap.on {
-    display: flex;
-}
-*/
-
-
-/* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {
-    body {background: red;}
-  } */ 
-
-  /* 모바일 */
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  /* @media only screen and (min-width: 600px) {
-    body {background: green;}
-
-  } */
-  
-  /* Medium devices (landscape tablets, 768px and up) */
-  /* @media only screen and (max-width: 992px) {
-    body {background: blue;}
-    .wrap {width: 100%;}
-   header h1 a {
-       width: 20%;
-   }
-  }  */
-  
-  /* tablet
-  /* Large devices (laptops/desktops, 992px and up) */
-   /* @media only screen and (min-width: 992px) {
-   body {background: orange;}
-  }  */
